@@ -9,7 +9,7 @@ import alissa from "../assets/alissa.JPG";
 
 // Systems Team
 import ben from "../assets/ben.jpg";
-import michelle from "../assets/Michelle Ramirez.JPG";
+import michelle from "../assets/MichelleR.jpg";
 import systems from "../assets/systems-group-photo.JPG";
 import mia from "../assets/mia.JPG";
 import allison from "../assets/allison.JPG";
@@ -17,7 +17,7 @@ import allison from "../assets/allison.JPG";
 // UAV Design Team
 import stephen from "../assets/stephen.JPG";
 import neithen from "../assets/uavd-neithen.JPG";
-import ianC from "../assets/Ian C.JPG";
+import ianC from "../assets/IanC.JPG";
 import sarah from "../assets/uavd-sarah.JPG";
 import jacob from "../assets/uavd-jacob.JPG";
 import sullivan from "../assets/uavd-sullivan.JPG";
@@ -26,7 +26,7 @@ import jack from "../assets/uavd-jack.JPG";
 import uavD from "../assets/uav-design-team.JPG";
 
 // GNC Team
-import waamiq from "../assets/Waamiq Sharrar.JPG";
+import waamiq from "../assets/WaamiqS.JPG";
 import johnF from "../assets/gnc-john.JPG";
 import isaac from "../assets/gnc-isaac.JPG";
 import nathaniel from "../assets/gnc-nathaniel.JPG";
@@ -59,7 +59,7 @@ import obstacleAvoidance2 from "../assets/obs-avo-in-action.JPG";
 
 // Payload Team
 import robbie from "../assets/robbie.JPG";
-import aidenS from "../assets/Aiden Sanchez.JPG";
+import aidenS from "../assets/aidenS.JPG";
 import joseAM from "../assets/Jose_A.M.JPG";
 import harrison from "../assets/harrisonC.JPG";
 import alex from "../assets/alexS.JPG";
