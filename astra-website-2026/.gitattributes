@@ -1,0 +1,21 @@
+# Text files
+* text=auto eol=lf
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+
+# Videos
+*.mp4 binary
+*.mov binary
+
+# Documents / archives
+*.pdf binary
+*.zip binary
+
+# Executables
+*.exe binary

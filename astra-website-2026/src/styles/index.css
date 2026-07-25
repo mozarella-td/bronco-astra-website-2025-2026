@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  font-family: 'Geologica', 'Zalando Sans SemiExpanded', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #090909;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0px 40px;
+  margin: 0px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.4));
+  backdrop-filter: blur(5px);
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-size: 1.3em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: fit-content;
+  gap: 15px;
+  margin: 0 5px 0 0;
+  padding: 0 5px 0 0;
+  position: relative;
+  height: 80px;
+}
+
+.astra--logo {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  margin: 0;
+  padding-right: 5px;
+  display: block;
+  object-fit: contain;
+}
+
+.logo h2 {
+  color: #FFB81C;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFB81C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover, nav a:active {
+  background: linear-gradient(90deg, #005030, #A4D65E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav-search {
+  margin-left: 10px;         
+  position: relative;
+  width: 240px;            
+  height: 38px;
+}
+
+.nav-search__input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.9);
+  padding: 0 44px 0 12px;
+  outline: none;
+  border-radius: 2px;   
+}
+
+.nav-search__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  color: rgba(255,255,255,0.9);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.nav-search__input:focus {
+  border-color: rgba(255,255,255,1);
+}
+
+.nav-search__btn:hover {
+  color: #FFB81C;
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100%;
+}
+
+.home-page--hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.home-page--hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100vh;
+    min-width: 177.78vh;
+    transform: translate(-50%, -50%);
+    border: none;
+    pointer-events: none;
+}
+
+.home-page--about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 50px 20px;
+  gap: 20px;
+}
+
+.home-page--about-title {
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: 0.32em;
+  color: #FFB81C;
+  margin: 0;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.home-page--about-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 184, 28, 0.7);
+}
+
+
+.about-container--cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.about--who,
+.about--what,
+.about--why {
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  background-color: #005030;
+  border-radius: 18px;
+  padding: 28px;
+  width: 320px;
+  box-shadow: 0 10px 15px rgba(164, 214, 94, 0.4);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #F2EEE8;
+}
+
+.home-page--interview-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #090909;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100vw;
+  height: 300px;
+  font-size: 0.9em;
+  font-family: 'Zalando Sans SemiExpanded', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.sponsor-section {
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lockheed-logo {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-and-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  gap: 60px;
+  width: min(1200px, 92vw);
+  margin-top: 40px;
+}
+
+#lead-role {
+  color: #FFB81C;
+  font-weight: 700;
+}
+
