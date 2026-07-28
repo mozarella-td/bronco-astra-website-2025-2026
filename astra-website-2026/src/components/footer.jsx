@@ -1,4 +1,4 @@
-import sponsor from '../assets/lockheed-martin-logo.png';
+import sponsor from '../assets/lockheed-martin-logo.webp';
 
 function Footer () {
     return (

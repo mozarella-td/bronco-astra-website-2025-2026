@@ -1,7 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Fuse from "fuse.js";
-import logo from "../assets/bronco-astra-logo.png";
+import logo from "../assets/bronco-astra-logo.webp";
 import cleanContent from "../constants/content.js";
 
 function escapeRegExp(str) {

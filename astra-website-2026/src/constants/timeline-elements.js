@@ -1,4 +1,4 @@
-import placeholder from "../assets/picture-placeholder.png";
+import placeholder from "../assets/picture-placeholder.webp";
 
 const astraImages = import.meta.glob("../assets/astra-timeline-img*.png", {
   eager: true,
