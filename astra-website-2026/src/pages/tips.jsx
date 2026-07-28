@@ -1,60 +1,66 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import "../styles/tips.css";
 
 const resources = [
   {
-    category: "Simulation",
     type: "Simulation",
+    category: "Simulation",
     title: "Gazebo LiDAR Simulation",
     author: "Max Gross",
     description:
       "A virtual drone uses a 2D LiDAR sensor to detect obstacles, map its surroundings, and adjust its path before real flight testing.",
+    link: "https://www.youtube.com/watch?v=xgWjMpqiuKk",
     tags: ["Gazebo", "ROS", "LiDAR"],
   },
   {
-    category: "Simulation",
     type: "Simulation",
+    category: "Simulation",
     title: "Object Recognition Simulation",
     author: "Joshua Estrada",
     description:
       "A simulated mission combining waypoint flight, real-time object detection, detection logs, and payload-drop waypoint insertion.",
+    link: "https://drive.google.com/file/d/1MPoKDMezzSS-MAb_oUhWLQGHRm0j4SkE/view",
     tags: ["AirSim", "Mission Planner", "Vision"],
   },
   {
-    category: "Simulation",
     type: "Simulation",
+    category: "Simulation",
     title: "Triggering Jetson Shutdown Through Mission Planner",
     author: "Areg Hovumyan",
     description:
       "A ROS2 and MAVROS test that validates ground-initiated companion-computer shutdown during simulation.",
+    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FSoftware%2FObject%20Recognition%2FDocumentation%2FSimulations%2F12%2D9%2D25%20Shutting%20Jetson%20through%20MissionPlanner%20simulation%2FRecording%202025%2D12%2D09%20104557%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133198176&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ea6ae3ce3%2D66df%2D416a%2Daac7%2Dad5d5d8e3557",
     tags: ["Jetson", "MAVROS", "ROS2"],
   },
   {
-    category: "Simulation",
     type: "Simulation",
+    category: "Simulation",
     title: "Dynamic Waypoint Mission Simulation",
     author: "Ryan Tran",
     description:
-      "A virtual mission used to monitor aircraft path, waypoint progress, heading, and image-capture messages before applying the workflow to Sentinel.",
-    tags: ["Autonomy", "Waypoints", "Mission Planner"],
+      "A virtual mission used to monitor aircraft path, waypoint progress, heading, and image-capture messages before applying the workflow to real flight testing.",
+    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FSoftware%2FObject%20Recognition%2FDocumentation%2FSimulations%2F2%2D26%2D26%20Dynamic%20Flight%20Test%2Fflight%5Fsim%5F02%2D26%2D26%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133279105&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E6b89fc5b%2Da93b%2D4e94%2D9200%2D8acd48bb640d",
+    tags: ["Simulation", "Waypoints", "Mission"],
   },
   {
-    category: "Simulation",
     type: "Simulation",
+    category: "Simulation",
     title: "Telemetry Noise Simulation",
     author: "Waamiq Sharrar",
     description:
       "An RFD900 radio-health evaluation comparing RSSI and noise levels to find telemetry issues before flight testing.",
+    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FGCS%2FRFD900x%20Noise%20Simulation%2F2%2D25%2D26%2F2026%2D02%2D25%2019%2D01%2D51%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133316564&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E0f3ae7f9%2D57df%2D406c%2Da91e%2D0fb9bf200ed3",
     tags: ["RFD900", "Telemetry", "RSSI"],
   },
   {
-    category: "UAV Design",
     type: "Document",
+    category: "UAV Design",
     title: "Material Research",
     author: "Sarah Pu",
     description:
       "Frame-material and airframe-layout trade studies for making an informed early vehicle design decision.",
-    tags: ["Trade Study", "Airframe", "Materials"],
+    link: "https://livecsupomona-my.sharepoint.com/:x:/g/personal/dnking_cpp_edu/IQDBlifXgkWKR4zxHvRFObXdASFd6-eW4yBmfhY8zYmNA54?e=1DDAe7&or=WORD-WEB.BODY.NT&ct=1785133328382",
+    tags: ["Materials", "Airframe", "Design"],
   },
   {
     category: "UAV Design",
@@ -63,6 +69,7 @@ const resources = [
     author: "E. Yücesoy, B. Balcik, and E. Coban",
     description:
       "Background research connecting UAV design decisions to real emergency-response needs.",
+    link: "https://onlinelibrary.wiley.com/doi/10.1111/itor.13484",
     tags: ["Research", "Disaster Response"],
   },
   {
@@ -72,6 +79,7 @@ const resources = [
     author: "H. M. Ray, R. Singer, and N. Ahmed",
     description:
       "A review of small UAS use in search and rescue, firefighting, law enforcement, and evidence collection.",
+    link: "https://arxiv.org/abs/2207.07761",
     tags: ["Public Safety", "Research"],
   },
   {
@@ -81,6 +89,7 @@ const resources = [
     author: "Aiden Sanchez",
     description:
       "A 2026 payload-parachute selection study covering descent rate, deployment height, wind drift, landing accuracy, and folding references.",
+    link: "https://livecsupomona-my.sharepoint.com/shared?listurl=https%3A%2F%2Flivecsupomona%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments&id=%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments%2FSUAS%202026%2FStructural%20%26%20Systems%2FVIS%2FPayload%2FDocumentation%2FParachute%20Reports%2FProject%20Astra%20%2D%20Hemispherical%2060%5F%20Main%20Parachute%20Evaluation%28updated%20calcs%29%20%282%29%2Epdf&parent=%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments%2FSUAS%202026%2FStructural%20%26%20Systems%2FVIS%2FPayload%2FDocumentation%2FParachute%20Reports&ct=1785133612714&or=WORD%2DWEB%2EBODY%2ENT&shareLink=1&ga=1",
     tags: ["Payload", "Parachute", "Calculations"],
   },
   {
@@ -90,6 +99,7 @@ const resources = [
     author: "Waamiq Sharrar",
     description:
       "A practical reference for payload wiring, Jetson GPIO, PCA9685 servo control, I2C checks, and sensor integration.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQBHpE0R-FQLR77J7BG1PJ5YARLZwz8hdmdBsmk1jwj3Wdw?e=POYdLt&or=WORD-WEB.BODY.NT&ct=1785133639631",
     tags: ["Jetson", "GPIO", "I2C"],
   },
   {
@@ -99,6 +109,7 @@ const resources = [
     author: "Waamiq Sharrar",
     description:
       "Battery, energy, current, wire-gauge, connector, and power-distribution tradeoffs for a safe electrical architecture.",
+    link: "https://livecsupomona-my.sharepoint.com/shared?listurl=https%3A%2F%2Flivecsupomona%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments&id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FSentinel%2F6S9P%20Concetualizing%2Epdf&parent=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FSentinel&ct=1785133706170&or=WORD%2DWEB%2EBODY%2ENT&shareLink=1&ga=1",
     tags: ["Power", "Battery", "PDB"],
   },
   {
@@ -108,6 +119,7 @@ const resources = [
     author: "Waamiq Sharrar",
     description:
       "A fast troubleshooting reference for common pre-arm, pre-flight, and in-flight ground-control errors.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQDKQT1DPVSKRK4luR7OtzepAVu0GXodtyqy-ftyZiFwhZw?e=vJTY8o&or=WORD-WEB.BODY.NT&ct=1785133722957",
     tags: ["GCS", "Troubleshooting", "Pixhawk"],
   },
   {
@@ -117,6 +129,7 @@ const resources = [
     author: "Francis Saspa",
     description:
       "A step-by-step operator script for calibration, setup, safety callouts, flight monitoring, and post-flight shutdown.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQD11CfSZu_oSq3d9KKks7QSAW_3ggSKC9i1MAEqMp88OpY?e=KCpucb&or=WORD-WEB.BODY.NT&ct=1785133798366",
     tags: ["Safety", "Flight Test", "Checklist"],
   },
   {
@@ -126,6 +139,7 @@ const resources = [
     author: "Francis Saspa",
     description:
       "A quick guide to common ArduPilot modes, GPS needs, pilot input, and expected aircraft behavior.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQADNc12FcKRR6LhLBVnvX3eAQjI0oO5vO1A4NmCbKHMyEY?e=EEWeUz&or=WORD-WEB.BODY.NT&ct=1785133811751",
     tags: ["ArduPilot", "Flight Modes"],
   },
   {
@@ -135,6 +149,7 @@ const resources = [
     author: "Michael Kaydanik",
     description:
       "CAN topology, termination, cable selection, EMI risks, and mitigation guidance for reliable integration.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQCa_rEE9qBGR7dxB3XjeihgAQ-IvZdZGrYwTPGw_DFFYCk?e=SCfrCx&or=WORD-WEB.BODY.NT&ct=1785133862251",
     tags: ["CAN", "EMI", "Wiring"],
   },
   {
@@ -144,6 +159,7 @@ const resources = [
     author: "Leo Chen",
     description:
       "A detailed on-site checklist covering frame readiness, motor checks, propeller safety, and flight observations.",
+    link: "https://drive.google.com/file/d/1suxkOlfv0v5XavHAQb0hyod1w8exiWKX/view",
     tags: ["Safety", "Pre-Flight", "Operations"],
   },
   {
@@ -153,6 +169,7 @@ const resources = [
     author: "Ethan McKendell",
     description:
       "A technical tutorial for LiDAR, Pixhawk parameters, MAVLink, ROS, and path-planning approaches such as Bendy Ruler and Dijkstra's.",
+    link: "https://drive.google.com/file/d/1NpjCnWOdh9B8eaUiAXJacj806BH2M0pz/view",
     tags: ["LiDAR", "Pixhawk", "ROS"],
   },
   {
@@ -162,6 +179,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A central setup, workflow, and troubleshooting resource for Jetson, cameras, ROS2, MAVROS, Mission Planner, and HPC use.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQDUr5GjqkqXQr-_v7RIEGEEAb9T6T7JRDOhRjeZWubU_ts?e=YSJDol&or=WORD-WEB.BODY.NT&ct=1785133998931",
     tags: ["Jetson", "ROS2", "Onboarding"],
   },
   {
@@ -171,6 +189,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A friendly reference for repositories, branches, commits, pull requests, and shared software workflows.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQCfpo4KxL9aSZy9O4WDDKVnAQ598pib5x7WeLtz282b2AI?e=fau32J&or=WORD-WEB.BODY.NT&ct=1785134012843",
     tags: ["Git", "Software"],
   },
   {
@@ -180,6 +199,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A structured pre-flight procedure for camera verification, MAVROS, services, waypoint updates, and log retrieval.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQBQGgKKFLd5SZK7YmvJJdQSARxttD42ThFFQFGXRVu7xi4?e=2RfLLs&or=WORD-WEB.BODY.NT&ct=1785134027951",
     tags: ["Vision", "Flight Test", "MAVROS"],
   },
   {
@@ -189,6 +209,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A concise diagnostic guide for ROS2 launch, serial permissions, wiring, TELEM ports, and baud-rate settings.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQBEMgFjtU_cQLJZmOuIpcC9AeLFyN3eFHPyPFWm625wQwo?e=zIJb1y&or=WORD-WEB.BODY.NT&ct=1785134044213",
     tags: ["MAVROS", "Troubleshooting"],
   },
   {
@@ -198,6 +219,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A system-level map of detection, waypoints, GPS, mapping, image capture, shutdown, parameters, and launch files.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQA0okn0f_d-R7qyfZkcXQMvAUNRwTdGXW2KMCNGyHElMmw?e=XX6xFW",
     tags: ["Architecture", "ROS2", "Software"],
   },
   {
@@ -207,6 +229,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A practical guide to the university HPC environment, Conda, tmux, Linux, and SLURM job workflows.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQB59-T3WTCgT7tyzXjXkm5-AZ7RoAz0AdtEL3M0bMx8STM?e=Jh680k",
     tags: ["HPC", "SLURM", "Conda"],
   },
   {
@@ -216,6 +239,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A repeatable workflow for data transfer, Roboflow, YOLO training, interactive jobs, batch jobs, and model weights.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQDVfFfVii64TKR98ci00v_LAY7DOPnsx-7dznuBi17D_e8?e=BZ1Ltg",
     tags: ["YOLO", "HPC", "Training"],
   },
   {
@@ -225,6 +249,7 @@ const resources = [
     author: "Areg Hovumyan",
     description:
       "A reference for the aerial-image detection node: slicing, duplicate filtering, annotations, ROS2 topics, and tuning.",
+    link: "",
     tags: ["SAHI", "YOLO", "Detection"],
   },
   {
@@ -234,123 +259,146 @@ const resources = [
     author: "Areg Hovumyan",
     description:
       "A mission-specific dataset workflow using drone-perspective images, annotation, synthetic images, and Unity.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQCNk4xUFoJGQ66AL8vf93bWAeACdCPmb_zYDW6gySSGWHY?e=DGgqhP",
+    tags: ["Training", "Datasets", "Unity"],
+  },
+  {
+    category: "Object Recognition",
+    type: "Guide",
+    title: "Custom Model Training Guide",
+    author: "Areg Hovumyan",
+    description:
+      "A mission-specific object detection dataset workflow using drone-perspective images, annotation, AI-generated synthetic data, and Unity.",
+    link: "https://livecsupomona-my.sharepoint.com/:w:/g/personal/akvogel_cpp_edu/IQDV4lQlZWQxQZN06oluJHiiAcD1_lIO1Mvqzd0FqsTAWqQ?e=SqOUlW",
     tags: ["Training", "Datasets", "Unity"],
   },
 ];
 
 const categories = [
   "All",
-  ...new Set(resources.map((resource) => resource.category)),
+  "Simulation",
+  "UAV Design",
+  "Payload",
+  "GNC",
+  "Obstacle Avoidance",
+  "Object Recognition",
 ];
 
 function ResourceCard({ resource, index }) {
-  const [expanded, setExpanded] = useState(false);
-
   return (
     <article className="tips-card" style={{ "--delay": `${index * 45}ms` }}>
       <div className="tips-card__topline">
         <span className="tips-card__type">{resource.type}</span>
+
         <span className="tips-card__category">{resource.category}</span>
       </div>
+
       <h3>{resource.title}</h3>
+
       <p className="tips-card__author">By {resource.author}</p>
-      <p
-        className={
-          expanded
-            ? "tips-card__description is-expanded"
-            : "tips-card__description"
-        }
-      >
-        {resource.description}
-      </p>
+
+      <p className="tips-card__description">{resource.description}</p>
+
       <div className="tips-card__bottom">
         <div className="tips-card__tags">
           {resource.tags.map((tag) => (
             <span key={tag}>{tag}</span>
           ))}
         </div>
-        <button
-          type="button"
-          onClick={() => setExpanded(!expanded)}
-          aria-expanded={expanded}
+
+        <a
+          href={resource.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="tips-card__link"
         >
-          {expanded ? "Show less" : "Read overview"}
-          <span aria-hidden="true"> {expanded ? "−" : "+"}</span>
-        </button>
+          Learn More
+          <span aria-hidden="true"> +</span>
+        </a>
       </div>
     </article>
   );
 }
 
-function Tips() {
+export default function Tips() {
   const [activeCategory, setActiveCategory] = useState("All");
-  const [query, setQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredResources = useMemo(() => {
-    const search = query.trim().toLowerCase();
-    return resources.filter((resource) => {
-      const matchesCategory =
-        activeCategory === "All" || resource.category === activeCategory;
-      const searchable =
-        `${resource.title} ${resource.author} ${resource.description} ${resource.tags.join(" ")}`.toLowerCase();
-      return matchesCategory && (!search || searchable.includes(search));
-    });
-  }, [activeCategory, query]);
+  const filteredResources = resources.filter((resource) => {
+    const matchesCategory =
+      activeCategory === "All" || resource.category === activeCategory;
+
+    const searchText = searchQuery.toLowerCase();
+
+    const matchesSearch =
+      resource.title.toLowerCase().includes(searchText) ||
+      resource.author.toLowerCase().includes(searchText) ||
+      resource.description.toLowerCase().includes(searchText) ||
+      resource.tags.some((tag) => tag.toLowerCase().includes(searchText));
+
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <main className="tips-page">
       <section className="tips-hero">
         <div className="tips-hero__grid" aria-hidden="true" />
-        <p className="tips-eyebrow">Bronco ASTRA knowledge base</p>
+
+        <p className="tips-eyebrow">Bronco ASTRA Knowledge Base</p>
+
         <h1>
-          Build on what
+          Learn from
           <br />
-          <em>we learned.</em>
+          <em>what we build.</em>
         </h1>
+
         <p className="tips-hero__copy">
-          Practical simulations, field-tested procedures, and technical
-          references created to help the next team move faster with more
-          confidence.
+          Explore the tools, simulations, research, and technical resources that
+          help the Bronco ASTRA team design, test, and improve our aircraft.
         </p>
+
         <div className="tips-stats">
           <span>
             <strong>{resources.length}</strong> resources
           </span>
+
           <span>
-            <strong>5</strong> disciplines
-          </span>
-          <span>
-            <strong>2026</strong> field notes
+            <strong>{categories.length - 1}</strong> topics
           </span>
         </div>
       </section>
-
-      <section className="tips-library" aria-labelledby="library-heading">
+      <section className="tips-library">
         <div className="tips-library__header">
           <div>
             <p className="tips-eyebrow">Explore the library</p>
-            <h2 id="library-heading">Find a starting point</h2>
+
+            <h2>Find a starting point</h2>
           </div>
+
           <label className="tips-search">
             <span className="sr-only">Search resources</span>
+
             <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="11" cy="11" r="6" />
-              <path d="m16 16 4 4" />
+              <circle cx="11" cy="11" r="7" />
+
+              <path d="m16 16 5 5" />
             </svg>
+
             <input
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              type="search"
               placeholder="Search topics, tools, or authors"
+              value={searchQuery}
+              onChange={(event) => setSearchQuery(event.target.value)}
             />
           </label>
         </div>
 
-        <div className="tips-filters" aria-label="Filter resources by category">
+        <div className="tips-filters">
           {categories.map((category) => (
             <button
               key={category}
-              className={activeCategory === category ? "is-active" : ""}
               type="button"
+              className={activeCategory === category ? "is-active" : ""}
               onClick={() => setActiveCategory(category)}
             >
               {category}
@@ -359,25 +407,27 @@ function Tips() {
         </div>
 
         <p className="tips-results">
-          Showing {filteredResources.length}{" "}
-          {filteredResources.length === 1 ? "resource" : "resources"}
+          Showing {filteredResources.length} resources
         </p>
-        <div className="tips-grid">
-          {filteredResources.map((resource, index) => (
-            <ResourceCard
-              key={resource.title}
-              resource={resource}
-              index={index}
-            />
-          ))}
-        </div>
-        {!filteredResources.length && (
+
+        {filteredResources.length > 0 ? (
+          <section className="tips-grid">
+            {filteredResources.map((resource, index) => (
+              <ResourceCard
+                key={`${resource.title}-${index}`}
+                resource={resource}
+                index={index}
+              />
+            ))}
+          </section>
+        ) : (
           <div className="tips-empty">
-            <p>No resources matched that search.</p>
+            <p>No resources found matching your search.</p>
+
             <button
               type="button"
               onClick={() => {
-                setQuery("");
+                setSearchQuery("");
                 setActiveCategory("All");
               }}
             >
@@ -386,19 +436,20 @@ function Tips() {
           </div>
         )}
       </section>
-
       <section className="tips-callout">
-        <p className="tips-eyebrow">Technical graphics</p>
-        <h2>See the system before you build it.</h2>
+        <p className="tips-eyebrow">Keep learning</p>
+
+        <h2>
+          Every test, simulation, and design decision teaches us something new.
+        </h2>
+
         <p>
-          Our technical-graphics collection documents Sentinel’s subsystem
-          communications, ROS-based object-detection pipeline, and the
-          trade-study process behind engineering decisions.
+          The Bronco ASTRA team continues to document and share the resources
+          that help us improve our aircraft and become better engineers.
         </p>
-        <span className="tips-callout__line" aria-hidden="true" />
+
+        <div className="tips-callout__line" aria-hidden="true" />
       </section>
     </main>
   );
 }
-
-export default Tips;

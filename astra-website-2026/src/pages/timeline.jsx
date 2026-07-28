@@ -63,6 +63,8 @@ function Timeline() {
     },
   };
 
+  const categories = ["All", ...Object.keys(colorMap)];
+
   const handleExpand = (id) => {
     setExpandedID((prevID) => (prevID === id ? null : id));
   };
@@ -76,54 +78,43 @@ function Timeline() {
     <div className="timeline-container">
       <section className="timeline-hero">
         <div className="timeline-hero__grid" aria-hidden="true" />
+
         <p className="timeline-eyebrow">Bronco ASTRA Timeline</p>
+
         <h1>
           See how we
           <br />
           <em>progressed.</em>
         </h1>
+
         <p className="timeline-hero__copy">
           A chronological snapshot of our team's progress, decisions, and
-            engineering milestones as we prepare for SUAS 2026
+          engineering milestones as we prepare for SUAS 2026
         </p>
       </section>
 
-
       <div className="timeline-filter-container">
         <h3>Filter by Subteam:</h3>
-        <div className="timeline-filter-buttons">
-          {Object.keys(colorMap).map((subteam) => {
-            const isActive = activeFilter === subteam;
+
+        <div className="timeline-filters">
+          {categories.map((category) => {
+            const buttonColor =
+              category === "All" ? "#333" : colorMap[category].buttonColor;
 
             return (
               <button
-                key={subteam}
-                className={`timeline-filter-btn ${isActive ? "active" : ""}`}
-                onClick={() => setActiveFilter(subteam)}
+                key={category}
+                type="button"
+                className={activeFilter === category ? "is-active" : ""}
+                onClick={() => setActiveFilter(category)}
                 style={{
-                  backgroundColor: isActive
-                    ? colorMap[subteam].buttonColor
-                    : "#A4D65E",
-                  color: isActive ? "#fff" : "#000",
-                  border: `2px solid ${colorMap[subteam].buttonColor}`,
+                  "--button-color": buttonColor,
                 }}
               >
-                {subteam}
+                {category}
               </button>
             );
           })}
-
-          <button
-            className={`timeline-filter-btn ${activeFilter === "All" ? "active" : ""}`}
-            onClick={() => setActiveFilter("All")}
-            style={{
-              backgroundColor: activeFilter === "All" ? "#333" : "#A4D65E",
-              color: activeFilter === "All" ? "#fff" : "#000",
-              border: "2px solid #333",
-            }}
-          >
-            All
-          </button>
         </div>
       </div>
 
@@ -160,7 +151,9 @@ function Timeline() {
                   >
                     <div className="timeline-left">
                       <h3 className="timeline-title">{element.title}</h3>
+
                       <h4 className="timeline-event-date">{element.date}</h4>
+
                       <h4 className="timeline-title-description">
                         {element.titleDescription}
                       </h4>
@@ -196,6 +189,18 @@ function Timeline() {
           })}
         </VerticalTimeline>
       </div>
+      <section className="timeline-callout">
+        <p className="timeline-eyebrow">Our journey</p>
+
+        <h2>From our first flight to the next generation of flight.</h2>
+
+        <p>
+          Explore the milestones, challenges, and breakthroughs that have shaped
+          the Bronco ASTRA team.
+        </p>
+
+        <div className="timeline-callout__line" aria-hidden="true" />
+      </section>
     </div>
   );
 }

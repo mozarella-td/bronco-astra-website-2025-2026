@@ -173,19 +173,432 @@
   margin-bottom: 24px;
 }
 
-.timeline-filter-buttons {
+.timeline-filters {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 42px 0 16px;
 }
 
-.timeline-filter-btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  width: 120px;
+.timeline-filters button,
+.timeline-empty button {
+  border: 1px solid var(--button-color, rgba(255, 255, 255, 0.2));
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: rgba(246, 241, 232, 0.78);
+  background: transparent;
+  font: inherit;
+  font-size: 0.8rem;
   cursor: pointer;
-  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.timeline-filters button:hover,
+.timeline-filters button.is-active {
+  color: #fff;
+  border-color: var(--button-color);
+  background: var(--button-color);
+}
+
+.timeline-empty button:hover {
+  color: #090909;
+  border-color: #a4d65e;
+  background: #a4d65e;
+}
+
+.timeline-callout h2 {
+  margin: 0;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.timeline-callout h2 {
+  font-size: clamp(2.15rem, 4vw, 4rem);
+}
+
+.timeline-callout {
+  position: relative;
+  padding: 74px max(7vw, 24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  background: #005030;
+}
+
+.timeline-callout h2 {
+  max-width: 800px;
+}
+
+.timeline-callout > p:not(.timeline-eyebrow) {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: rgba(246, 241, 232, 0.78);
+  line-height: 1.7;
+}
+
+.timeline-callout__line {
+  position: absolute;
+  right: -8vw;
+  bottom: -13vw;
+  width: 58vw;
+  height: 58vw;
+  border: 1px solid rgba(164, 214, 94, 0.6);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 58px rgba(164, 214, 94, 0.09),
+    0 0 0 116px rgba(164, 214, 94, 0.06);
+}
+
+/* ==========================================
+   LARGE DESKTOPS (1600px+)
+========================================== */
+
+@media (min-width: 1600px) {
+
+  .timeline-hero {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+
+
+  .timeline-container--title {
+    left: 7vw;
+    max-width: 1000px;
+  }
+
+
+  .timeline-image {
+    max-width: 450px;
+  }
+
 }
 
 
+/* ==========================================
+   LAPTOPS
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .timeline-hero {
+    padding-top: 150px;
+  }
+
+
+  .timeline-container--title {
+    left: 30px;
+    width: 85%;
+  }
+
+
+  .timeline-container--title h1 {
+    font-size: 2.5rem;
+  }
+
+
+  .timeline-card-content {
+    gap: 18px;
+  }
+
+
+  .timeline-right {
+    flex: 0 0 180px;
+    max-width: 180px;
+  }
+
+
+  .timeline-image {
+    max-width: 320px;
+  }
+
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+  .timeline-container {
+    padding-top: 40px;
+    width: 100%;
+  }
+
+
+  .timeline-hero {
+    min-height: auto;
+    padding: 120px 36px 60px;
+    text-align: center;
+  }
+
+
+  .timeline-eyebrow {
+    text-align: center;
+  }
+
+
+  .timeline-hero h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+
+
+  .timeline-hero__copy {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  /* Timeline title block */
+  
+  .timeline-container--title {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: none;
+    padding: 20px 36px;
+    text-align: center;
+  }
+
+
+  .timeline-container--title h1 {
+    font-size: 2.2rem;
+  }
+
+
+  .timeline-container--title p {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    margin: 12px auto 0;
+    max-width: 500px;
+    color: rgba(246,241,232,0.75);
+  }
+
+
+
+  /* Timeline cards */
+
+  .timeline-card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .timeline-left {
+    width: 100%;
+  }
+
+
+  .timeline-right {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+
+  .timeline-image {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+
+  .timeline-description {
+    text-align: center;
+  }
+
+
+
+  /* Filters */
+
+  .timeline-filter-container {
+    padding: 0 24px;
+  }
+
+
+  .timeline-filters {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+}
+
+
+
+/* ==========================================
+   MOBILE PHONES (600px and below)
+========================================== */
+
+@media (max-width: 600px) {
+
+
+  /* Prevent horizontal scrolling */
+
+  .timeline-container {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+
+  /* ===============================
+     HERO SECTION
+  =============================== */
+
+
+  .timeline-hero {
+    padding: 105px 24px 45px;
+    min-height: 650px;
+  }
+
+
+  .timeline-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+
+
+  .timeline-hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+
+  .timeline-hero__copy {
+    margin-top: 22px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+
+
+  /* ===============================
+     TIMELINE TITLE
+  =============================== */
+
+
+  .timeline-container--title {
+    position: relative;
+    padding: 20px 24px;
+    text-align: center;
+  }
+
+
+  .timeline-container--title h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+
+  .timeline-container--title p {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+
+
+  /* ===============================
+     TIMELINE CARDS
+  =============================== */
+
+
+  .timeline-card-content {
+    gap: 16px;
+    flex-direction: column;
+  }
+
+
+  .timeline-image {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+
+  .timeline-title {
+    font-size: 1.2rem;
+  }
+
+
+  .timeline-description {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+
+
+  /* ===============================
+     BUTTONS / FILTERS
+  =============================== */
+
+
+  .timeline-filter-container {
+    margin-top: 15px;
+    padding: 0 18px;
+  }
+
+
+  .timeline-filters {
+    gap: 8px;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+
+  .timeline-filters button,
+  .timeline-empty button {
+    padding: 8px 12px;
+    font-size: 0.75rem;
+  }
+
+
+
+  .timeline-expand-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+
+
+  /* ===============================
+     CALLOUT
+  =============================== */
+
+
+  .timeline-callout {
+    padding: 55px 24px;
+  }
+
+
+  .timeline-callout h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+
+  .timeline-callout > p:not(.timeline-eyebrow) {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+
+  .timeline-callout__line {
+    width: 90vw;
+    height: 90vw;
+    right: -45vw;
+    bottom: -20vw;
+  }
+
+}

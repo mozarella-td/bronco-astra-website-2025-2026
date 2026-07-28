@@ -1,81 +1,85 @@
 import { useState } from "react";
 import "../styles/teams.css";
 
-import picture from "../assets/picture-placeholder.webp";
-import team from "../assets/astra-team-photo.webp";
-import danielle from "../assets/danielle.webp";
-import ashton from "../assets/ashton.webp";
-import alissa from "../assets/alissa.webp";
+import picture from "../assets/picture-placeholder.png";
+import team from "../assets/astra-team-photo.JPG";
+import danielle from "../assets/danielle.JPG";
+import ashton from "../assets/ashton.JPG";
+import alissa from "../assets/alissa.JPG";
 
 // Systems Team
-import ben from "../assets/ben.webp";
-import michelle from "../assets/MichelleR.webp";
-import systems from "../assets/systems-group-photo.webp";
-import mia from "../assets/mia.webp";
-import allison from "../assets/allison.webp";
+import ben from "../assets/ben.jpg";
+import michelle from "../assets/Michelle Ramirez.JPG";
+import systems from "../assets/systems-group-photo.JPG";
+import mia from "../assets/mia.JPG";
+import allison from "../assets/allison.JPG";
+import systems2 from "../assets/systems2.JPG";
 
 // UAV Design Team
-import stephen from "../assets/stephen.webp";
-import neithen from "../assets/uavd-neithen.webp";
-import ianC from "../assets/IanC.webp";
-import sarah from "../assets/uavd-sarah.webp";
-import jacob from "../assets/uavd-jacob.webp";
-import sullivan from "../assets/uavd-sullivan.webp";
-import kenneth from "../assets/uavd-kenneth.webp";
-import jack from "../assets/uavd-jack.webp";
-import uavD from "../assets/uav-design-team.webp";
+import stephen from "../assets/stephen.JPG";
+import neithen from "../assets/uavd-neithen.JPG";
+import ianC from "../assets/Ian C.JPG";
+import sarah from "../assets/uavd-sarah.JPG";
+import jacob from "../assets/uavd-jacob.JPG";
+import sullivan from "../assets/uavd-sullivan.JPG";
+import kenneth from "../assets/uavd-kenneth.JPG";
+import jack from "../assets/uavd-jack.JPG";
+import uavD from "../assets/uav-design-team.JPG";
+import uavD2 from "../assets/uavd2.jpg";
 
 // GNC Team
-import waamiq from "../assets/WaamiqS.webp";
-import johnF from "../assets/gnc-john.webp";
-import isaac from "../assets/gnc-isaac.webp";
-import nathaniel from "../assets/gnc-nathaniel.webp";
-import maxF from "../assets/gnc-maxF.webp";
-import andrew from "../assets/gnc-andrew.webp";
-import michaelK from "../assets/gnc-michael.webp";
-import francisco from "../assets/gnc-francisco.webp";
-import stephenL from "../assets/gnc-stephen.webp";
-import francis from "../assets/Francis Dominic.webp";
-import gnc1 from "../assets/gnc-team.webp";
-import gnc2 from "../assets/gnc-in-action.webp";
+import waamiq from "../assets/Waamiq Sharrar.JPG";
+import johnF from "../assets/gnc-john.JPG";
+import isaac from "../assets/gnc-isaac.JPG";
+import nathaniel from "../assets/gnc-nathaniel.JPG";
+import maxF from "../assets/gnc-maxF.JPG";
+import andrew from "../assets/gnc-andrew.JPG";
+import michaelK from "../assets/gnc-michael.JPG";
+import francisco from "../assets/gnc-francisco.JPG";
+import stephenL from "../assets/gnc-stephen.JPG";
+import francis from "../assets/Francis Dominic.JPG";
+import gnc1 from "../assets/gnc-team.JPG";
+import gnc2 from "../assets/gnc-in-action.JPG";
 
 // Object Recognition Team
-import ryan from "../assets/ryan-obj-rec.webp";
-import justin from "../assets/justin-object-rec.webp";
-import michael from "../assets/michael-obj-rec.webp";
-import jimmy from "../assets/jimmy.webp";
-import aro from "../assets/aro.webp";
-import dat from "../assets/dat.webp";
-import len from "../assets/len.webp";
-import objectRec from "../assets/object-recognition-team.webp";
+import ryan from "../assets/ryan-obj-rec.JPG";
+import justin from "../assets/justin-object-rec.JPG";
+import michael from "../assets/michael-obj-rec.JPG";
+import jimmy from "../assets/jimmy.JPG";
+import aro from "../assets/aro.JPG";
+import dat from "../assets/dat.JPG";
+import len from "../assets/len.JPG";
+import objectRec from "../assets/object-recognition-team.JPG";
+import objectRec2 from "../assets/obj-rec.JPG";
 
 // Obstacle Avoidance Team
-import kevin from "../assets/kevin.webp";
-import rachel from "../assets/rachel.webp";
-import hope from "../assets/hope.webp";
-import pawel from "../assets/pawel.webp";
-import obstacleAvoidance1 from "../assets/obstacle-avoidance-team.webp";
-import obstacleAvoidance2 from "../assets/obs-avo-in-action.webp";
+import kevin from "../assets/kevin.JPG";
+import rachel from "../assets/rachel.JPG";
+import hope from "../assets/hope.JPG";
+import pawel from "../assets/pawel.JPG";
+import obstacleAvoidance1 from "../assets/obstacle-avoidance-team.JPG";
+import obstacleAvoidance2 from "../assets/obs-avo-in-action.JPG";
 
 // Payload Team
-import robbie from "../assets/robbie.webp";
-import aidenS from "../assets/aidenS.webp";
-import joseAM from "../assets/Jose_A.M.webp";
-import harrison from "../assets/harrisonC.webp";
-import alex from "../assets/alexS.webp";
-import payload from "../assets/payload-team.webp";
+import robbie from "../assets/robbie.JPG";
+import aidenS from "../assets/Aiden Sanchez.JPG";
+import joseAM from "../assets/Jose_A.M.JPG";
+import harrison from "../assets/harrisonC.JPG";
+import alex from "../assets/alexS.JPG";
+import payload from "../assets/payload-team.JPG";
+import payload2 from "../assets/payload2.jpg";
 
 // Advisor
-import bhandari from "../assets/bhandari-advisor.webp";
+import bhandari from "../assets/bhandari-advisor.png";
 
 // Mentors
-import joshuaE from "../assets/joshua-estrada.webp";
-import maxG from "../assets/max-gross.webp";
-import leoC from "../assets/leo-chen.webp";
-import mattR from "../assets/matt-romero.webp";
+import joshuaE from "../assets/joshua-estrada.jpg";
+import maxG from "../assets/max-gross.jpg";
+import leoC from "../assets/leo-chen.jpg";
+import mattR from "../assets/matt-romero.jpg";
 
 //Sponsors
-import lockheed from "../assets/lockheed-martin-logo.webp";
+import lockheed from "../assets/lockheed-martin-logo.png";
 
 function CardFront({ image, name, role, showHint = false }) {
   return (
@@ -178,26 +182,26 @@ function Team() {
     <>
       <div className="team-page--shell">
         <section className="team-page__header">
-              <div className="team-hero__grid" aria-hidden="true"/>         
-              <div className="team-hero__content">
-                <div className="team-hero__text">
-                  <p className="team-eyebrow">Bronco ASTRA Members</p>
-                <h1 className="team-hero__title">
-                  Meet the Minds Behind
-                  <br />
-                  <em>ASTRA</em>
-                </h1>
-                <p className="team-hero__copy">
-                  The Bronco ASTRA team is composed of a diverse group of
-                  students from various engineering disciplines, each bringing
-                  their unique skills and perspectives to the project.
-                </p>
-                </div>
-                <div className="team-hero__image">
-                  <img src={team} alt="Bronco ASTRA Team" />
-                </div>
-              </div>
-            </section>
+          <div className="team-hero__grid" aria-hidden="true" />
+          <div className="team-hero__content">
+            <div className="team-hero__text">
+              <p className="team-eyebrow">Bronco ASTRA Members</p>
+              <h1 className="team-hero__title">
+                Meet the Minds Behind
+                <br />
+                <em>ASTRA</em>
+              </h1>
+              <p className="team-hero__copy">
+                The Bronco ASTRA team is composed of a diverse group of students
+                from various engineering disciplines, each bringing their unique
+                skills and perspectives to the project.
+              </p>
+            </div>
+            <div className="team-hero__image">
+              <img src={team} alt="Bronco ASTRA Team" />
+            </div>
+          </div>
+        </section>
         <div className="team-page--grid">
           <aside className="sidenav-container" aria-label="On This Page">
             <h2>On This Page</h2>
@@ -356,7 +360,7 @@ function Team() {
                     every other subteam’s work to be successfully integrated and
                     operated in flight.
                   </p>
-                  <img src={picture}></img>
+                  <img src={uavD2}></img>
                 </section>
               </div>
             </div>
@@ -418,7 +422,7 @@ function Team() {
                     iteration to improve reliability under real flight
                     conditions.
                   </p>
-                  <img src={picture}></img>
+                  <img src={payload2}></img>
                 </section>
                 <section className="payload-sec-two">
                   <img src={payload}></img>
@@ -573,7 +577,7 @@ function Team() {
                     identifies targets, determines their location, and provides
                     this information to other subsystems for decision-making.
                   </p>
-                  <img src={picture}></img>
+                  <img src={objectRec2}></img>
                 </section>
                 <section className="obj-rec-sec-two">
                   <img src={objectRec}></img>
@@ -688,7 +692,7 @@ function Team() {
                     overseeing competition requirements such as the technical
                     design report and team website.
                   </p>
-                  <img src={[picture]}></img>
+                  <img src={[systems2]}></img>
                 </section>
                 <section className="sys-sec-two">
                   <img src={systems}></img>
@@ -740,6 +744,20 @@ function Team() {
             </div>
           </div>
         </div>
+        <section className="team-callout">
+          <p className="team-callout__eyebrow">Build Community</p>
+
+          <h2>Great aircrafts are built by great teams.</h2>
+
+          <p>
+            Our team brings together students from different engineering
+            disciplines to design, build, test, and fly autonomous aerial
+            systems. Every member contributes a unique perspective to the
+            mission.
+          </p>
+
+          <div className="team-callout__line" aria-hidden="true" />
+        </section>
       </div>
     </>
   );

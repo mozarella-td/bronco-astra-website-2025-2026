@@ -1,9 +1,14 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useGLTF, Stage, PresentationControls, useProgress } from "@react-three/drei";
+import {
+  useGLTF,
+  Stage,
+  PresentationControls,
+  useProgress,
+} from "@react-three/drei";
 
-import '../styles/index.css';
-import '../styles/drone.css';
+import "../styles/index.css";
+import "../styles/drone.css";
 
 // Vite will process imported assets, so use a relative import from the src/pages folder.
 import modelPath from "../assets/UAVD_3D_Model_2026_Simplified.glb";
@@ -79,7 +84,7 @@ function Model(props) {
     }
   });
 
-  return <primitive ref={ref} object={scene} scale={0.01} {...props} />
+  return <primitive ref={ref} object={scene} scale={0.01} {...props} />;
 }
 
 function Loader() {
@@ -90,7 +95,9 @@ function Loader() {
       <div className="drone-loader__track">
         <div className="drone-loader__bar" style={{ width: `${progress}%` }} />
       </div>
-      <span className="drone-loader__label">Loading model… {Math.round(progress)}%</span>
+      <span className="drone-loader__label">
+        Loading model… {Math.round(progress)}%
+      </span>
     </div>
   );
 }
@@ -112,7 +119,8 @@ const DRONE_SECTIONS = [
       "Parachute Release Mechanism: The parachute release mechanism controls the safe deployment of the payload’s descent system after separation from Sentinel. A servo-operated restraint holds the parachute inside the casing during flight, while a spring-loaded pressure plate actively pushes it outward when deployment is commanded. This controlled sequence helps prevent premature opening, reduces the risk of entanglement, and slows the payload before landing near the target.",
     ],
     title: "PAYLOAD",
-    description: "The payload system enables Sentinel to autonomously deliver mission supplies to detected targets within the search area. Separate delivery assemblies carry an eight-ounce water bottle for the mannequin and a strobing beacon for the tent. Each payload incorporates a controlled release and descent system designed to protect the delivery object, maintain flight stability, and support accurate placement near the identified target.",
+    description:
+      "The payload system enables Sentinel to autonomously deliver mission supplies to detected targets within the search area. Separate delivery assemblies carry an eight-ounce water bottle for the mannequin and a strobing beacon for the tent. Each payload incorporates a controlled release and descent system designed to protect the delivery object, maintain flight stability, and support accurate placement near the identified target.",
   },
   {
     image: batteryImage1,
@@ -123,7 +131,8 @@ const DRONE_SECTIONS = [
       "Overall Specifications of Custom Battery: Sentinel’s battery system was assembled from nine 6S battery packs connected in parallel. Each pack provides 21.6 V, 4.5 Ah, and 97.2 Wh. The parallel configuration increases total capacity while maintaining the aircraft’s required 6S operating voltage.",
     ],
     title: "BATTERY",
-    description: "The battery system provides reliable power for Sentinel’s propulsion, avionics, onboard computing, sensing, and payload systems throughout the mission. The selected configuration balances usable energy, current capability, weight, and thermal safety to support extended autonomous flight without requiring an in-mission battery change or recharge.",
+    description:
+      "The battery system provides reliable power for Sentinel’s propulsion, avionics, onboard computing, sensing, and payload systems throughout the mission. The selected configuration balances usable energy, current capability, weight, and thermal safety to support extended autonomous flight without requiring an in-mission battery change or recharge.",
   },
   {
     image: propulsionImage2,
@@ -134,7 +143,8 @@ const DRONE_SECTIONS = [
       "Propellers - 20.2 × 6.6-Inch FLUXER Pro: The propellers work with the motors to generate the thrust required for flight. These propellers were selected because their 20.2-inch diameter is compatible with the MAD motor configuration and their carbon-fiber construction provides high stiffness at a low weight. The folding design also reduces Sentinel’s footprint during transportation and setup.",
     ],
     title: "PROPULSION",
-    description: "Sentinel’s propulsion system generates the thrust required for stable takeoff, autonomous waypoint flight, search operations, payload delivery, and landing. Its motors, propellers, and electronic speed controllers are selected and integrated to balance thrust margin, energy efficiency, thermal performance, and precise control while operating within the competition’s weight and flight-performance limits.",
+    description:
+      "Sentinel’s propulsion system generates the thrust required for stable takeoff, autonomous waypoint flight, search operations, payload delivery, and landing. Its motors, propellers, and electronic speed controllers are selected and integrated to balance thrust margin, energy efficiency, thermal performance, and precise control while operating within the competition’s weight and flight-performance limits.",
   },
   {
     image: structureImage1,
@@ -145,11 +155,20 @@ const DRONE_SECTIONS = [
       "3D-Printed Casings and Hardware Mounts - PLA or PC: The battery casings and hardware mounts were designed by the UAV Design Team and manufactured in-house using fused-filament 3D printing. Polylactic acid (PLA) was used for lower-load components, while polycarbonate (PC) was used where greater strength or temperature resistance was required. These custom parts secure Sentinel’s batteries, avionics, sensors, and supporting hardware while allowing each component to integrate with the airframe.",
     ],
     title: "STRUCTURE",
-    description: "Sentinel’s airframe provides a lightweight and rigid platform for the propulsion, battery, avionics, sensing, and payload systems. The structure is designed to remain within the competition’s 35-pound maximum flight weight while supporting rapid assembly, secure subsystem mounting, manageable transportation, and durability throughout repeated autonomous flight and payload-delivery operations.",
+    description:
+      "Sentinel’s airframe provides a lightweight and rigid platform for the propulsion, battery, avionics, sensing, and payload systems. The structure is designed to remain within the competition’s 35-pound maximum flight weight while supporting rapid assembly, secure subsystem mounting, manageable transportation, and durability throughout repeated autonomous flight and payload-delivery operations.",
   },
   {
     image: softwareImage1,
-    images: [softwareImage2, softwareImage3, softwareImage4, softwareImage5, softwareImage6, softwareImage7, softwareImage8],
+    images: [
+      softwareImage2,
+      softwareImage3,
+      softwareImage4,
+      softwareImage5,
+      softwareImage6,
+      softwareImage7,
+      softwareImage8,
+    ],
     texts: [
       "Ground Control Station - Mission Planner: Mission Planner was used as the primary interface between Sentinel and the ground team. It allowed the team to upload autonomous mission parameters, monitor real-time telemetry, and issue manual commands when required. Operators could view the drone’s position, battery status, GPS quality, altitude, ground speed, and other critical flight information throughout the mission.",
       "Object Detection Model - YOLOv26: YOLO26 was used as Sentinel’s object-detection model for identifying the mannequin and tent within the search boundary. The model processes imagery from the downward-facing camera and returns detection data that support target localization and selection of the corresponding water bottle or beacon payload. Its edge-optimized architecture is well suited for real-time processing on onboard computing hardware.",
@@ -160,11 +179,23 @@ const DRONE_SECTIONS = [
       "Simulation Environment - Gazebo: Gazebo was used to test Sentinel’s autonomous navigation and obstacle-avoidance software in a controlled virtual environment. The platform allowed the team to simulate aircraft movement, sensor behavior, and environmental obstacles before conducting physical flight testing. ●	Simulates three-dimensional environments ●	Models aircraft and sensor behavior ●	Supports autonomous-navigation testing ●	Integrates with ROS for software validation ●	Enables repeatable testing without physical flight",
     ],
     title: "SOFTWARE",
-    description: "Sentinel’s software stack coordinates autonomous flight, mission planning, risk mapping, target detection, payload delivery, and communication between the aircraft and Ground Control Station. It processes navigation and sensor data in real time, identifies mission-relevant objects within the search area, records their locations, and supports autonomous decisions while maintaining safety-pilot and operator override capabilities.",
+    description:
+      "Sentinel’s software stack coordinates autonomous flight, mission planning, risk mapping, target detection, payload delivery, and communication between the aircraft and Ground Control Station. It processes navigation and sensor data in real time, identifies mission-relevant objects within the search area, records their locations, and supports autonomous decisions while maintaining safety-pilot and operator override capabilities.",
   },
   {
     image: avionicsImage1,
-    images: [avionicsImage2, avionicsImage3, avionicsImage4, avionicsImage5, avionicsImage6, avionicsImage7, avionicsImage8, avionicsImage9, avionicsImage10, avionicsImage11],
+    images: [
+      avionicsImage2,
+      avionicsImage3,
+      avionicsImage4,
+      avionicsImage5,
+      avionicsImage6,
+      avionicsImage7,
+      avionicsImage8,
+      avionicsImage9,
+      avionicsImage10,
+      avionicsImage11,
+    ],
     texts: [
       "Flight Controller - CubePilot Cube Orange+: The Cube Orange+ was installed as Sentinel’s primary flight controller. It processes navigation and sensor data, stabilizes the aircraft, executes autonomous waypoint missions, and communicates with the Ground Control Station. Its redundant inertial sensors and failsafe processor improve reliability during autonomous operations. ●	Supports autonomous and manual flight modes ●	Includes redundant accelerometers and gyroscopes ●	Provides dual barometric pressure sensors ●	Supports CAN, serial, I²C, SPI, and PWM interfaces ●	Includes a dedicated failsafe processor",
       "Onboard Computer - NVIDIA Jetson Orin Nano Super: The Jetson Orin Nano Super was installed as Sentinel’s onboard companion computer. It processes camera and LiDAR data, runs the YOLO26 object-detection model, and supports the perception and autonomy software used during the mission. Its GPU accelerates AI inference without relying on an external computer or cloud service. ●	Provides up to 67 TOPS of AI performance ●	Includes a 1024-core NVIDIA Ampere GPU ●	Uses a six-core Arm Cortex-A78AE processor ●	Includes 8 GB of LPDDR5 memory ●	Operates within a configurable 7–25 W power range",
@@ -178,14 +209,18 @@ const DRONE_SECTIONS = [
       "Anti-Spark Switch - Flipsky 200A Anti-Spark Switch: The Flipsky anti-spark switch was installed between Sentinel’s battery system and main power-distribution hardware. It controls system startup while reducing the electrical arcing and inrush current that can occur when a high-capacity battery is connected. Its aluminum case also improves heat dissipation and protects the internal circuitry. ●	Reduces electrical arcing during power connection ●	Limits startup inrush current ●	Provides controlled system power activation ●	Protects high-current connectors and electronics ●	Supports high-current electrical systems",
     ],
     title: "AVIONICS",
-    description: "Sentinel’s avionics system integrates the flight controller, navigation sensors, onboard computer, imaging equipment, communications hardware, and power-management electronics required for autonomous operation. The system provides flight control, positioning, telemetry, environmental sensing, and communication with the Ground Control Station while supporting manual takeover, return-to-launch, flight termination, and other safety functions.",
+    description:
+      "Sentinel’s avionics system integrates the flight controller, navigation sensors, onboard computer, imaging equipment, communications hardware, and power-management electronics required for autonomous operation. The system provides flight control, positioning, telemetry, environmental sensing, and communication with the Ground Control Station while supporting manual takeover, return-to-launch, flight termination, and other safety functions.",
   },
 ];
 
 // Splits a text cell's body on "●" bullet markers so each bullet renders as
 // its own indented line instead of running together in one paragraph.
 function renderHexBody(body) {
-  const parts = body.split("●").map((part) => part.trim()).filter(Boolean);
+  const parts = body
+    .split("●")
+    .map((part) => part.trim())
+    .filter(Boolean);
   if (parts.length <= 1) return <p>{body}</p>;
 
   const [intro, ...bullets] = parts;
@@ -202,7 +237,15 @@ function renderHexBody(body) {
   );
 }
 
-function DroneSection({ image, images, texts, title, description, isOpen, onToggle }) {
+function DroneSection({
+  image,
+  images,
+  texts,
+  title,
+  description,
+  isOpen,
+  onToggle,
+}) {
   // One alternating image/text pair per real photo, so the rectangle count
   // tracks how much content this section actually has instead of a fixed count.
   const cellTypes = images.flatMap(() => ["image", "text"]);
@@ -246,7 +289,10 @@ function DroneSection({ image, images, texts, title, description, isOpen, onTogg
         <div className="drone-section__body">
           <div className="drone-section__hex-grid">
             {cellTypes.map((type, i) => (
-              <div key={i} className={`drone-section__hex drone-section__hex--${type}`}>
+              <div
+                key={i}
+                className={`drone-section__hex drone-section__hex--${type}`}
+              >
                 {type === "image" ? (
                   <img
                     src={images[i / 2]}
@@ -263,7 +309,9 @@ function DroneSection({ image, images, texts, title, description, isOpen, onTogg
                     const body = text.slice(colonIndex + 1).trim();
                     return (
                       <>
-                        <strong className="drone-section__hex-text-title">{heading}</strong>
+                        <strong className="drone-section__hex-text-title">
+                          {heading}
+                        </strong>
                         {renderHexBody(body)}
                       </>
                     );
@@ -279,87 +327,121 @@ function DroneSection({ image, images, texts, title, description, isOpen, onTogg
 }
 
 function Drone() {
-    const [openSections, setOpenSections] = useState(() => DRONE_SECTIONS.map(() => false));
-    const [isModelVisible, setIsModelVisible] = useState(true);
-    const modelContainerRef = useRef(null);
+  const [openSections, setOpenSections] = useState(() =>
+    DRONE_SECTIONS.map(() => false),
+  );
+  const [isModelVisible, setIsModelVisible] = useState(true);
+  const modelContainerRef = useRef(null);
 
-    const toggleSection = (index) => {
-        setOpenSections((prev) => prev.map((open, i) => (i === index ? !open : open)));
-    };
-
-    // The model's render loop runs every frame forever by default, even once the
-    // user has scrolled past it or switched tabs. Pausing it when it's off-screen
-    // (or the tab isn't active) keeps it loaded — no reload delay — but stops the
-    // continuous GPU/CPU cost while nobody's looking at it.
-    useEffect(() => {
-        const node = modelContainerRef.current;
-        if (!node) return;
-
-        const observer = new IntersectionObserver(
-            ([entry]) => setIsModelVisible(entry.isIntersecting),
-            { threshold: 0 }
-        );
-        observer.observe(node);
-
-        return () => observer.disconnect();
-    }, []);
-
-    const [isTabVisible, setIsTabVisible] = useState(!document.hidden);
-    useEffect(() => {
-        const handleVisibilityChange = () => setIsTabVisible(!document.hidden);
-        document.addEventListener("visibilitychange", handleVisibilityChange);
-        return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
-    }, []);
-
-    const isModelActive = isModelVisible && isTabVisible;
-
-    return (
-        <div className="drone-page-container">
-            <div className="drone-page--hero-container">
-                <div className="drone-hero-text">
-                    <h1 className="drone-hero-text__title">SENTINEL</h1>
-                    <p className="drone-hero-text__description">
-                        Our fully autonomous UAV, built from the ground up for the 2026 SUAS
-                        competition. Every subsystem — airframe, avionics, propulsion, and
-                        payload — is engineered to work as one integrated system.
-                    </p>
-                </div>
-                <div className="drone-model-container" ref={modelContainerRef}>
-                    <Canvas
-                        dpr={1}
-                        camera={{ fov: 45 }}
-                        style={{ width: "100%", height: "100%" }}
-                        frameloop={isModelActive ? "always" : "never"}
-                    >
-                        <color attach="background" args={["#090909"]} />
-                        <Suspense fallback={null}>
-                            <PresentationControls speed={1.5} global zoom={0.5} polar={[-0.1, Math.PI / 4]}>
-                                <Stage environment={null} preset="rembrandt" intensity={1.2} shadows={false}>
-                                    <Model scale={5.0} />
-                                </Stage>
-                            </PresentationControls>
-                        </Suspense>
-                    </Canvas>
-                    <Loader />
-                </div>
-            </div>
-
-            <div className="drone-sections-container">
-                {DRONE_SECTIONS.map((section, index) => (
-                    <DroneSection
-                        key={section.title}
-                        image={section.image}
-                        images={section.images}
-                        texts={section.texts}
-                        title={section.title}
-                        description={section.description}
-                        isOpen={openSections[index]}
-                        onToggle={() => toggleSection(index)}
-                    />
-                ))}
-            </div>
-        </div>
+  const toggleSection = (index) => {
+    setOpenSections((prev) =>
+      prev.map((open, i) => (i === index ? !open : open)),
     );
+  };
+
+  // The model's render loop runs every frame forever by default, even once the
+  // user has scrolled past it or switched tabs. Pausing it when it's off-screen
+  // (or the tab isn't active) keeps it loaded — no reload delay — but stops the
+  // continuous GPU/CPU cost while nobody's looking at it.
+  useEffect(() => {
+    const node = modelContainerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsModelVisible(entry.isIntersecting),
+      { threshold: 0 },
+    );
+    observer.observe(node);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const [isTabVisible, setIsTabVisible] = useState(!document.hidden);
+  useEffect(() => {
+    const handleVisibilityChange = () => setIsTabVisible(!document.hidden);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () =>
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  const isModelActive = isModelVisible && isTabVisible;
+
+  return (
+    <div className="drone-page-container">
+      <section className="drone-page__title-hero">
+        <div className="drone-page__title-hero__grid" aria-hidden="true" />
+        <p className="drone-page__title-hero-eyebrow">Bronco ASTRA Drone</p>
+        <h1>
+          Experience
+          <br />
+          <em>SENTINEL.</em>
+        </h1>
+        <p className="drone-page__title-hero__copy">
+          Our fully autonomous UAV, built from the ground up for the 2026 SUAS
+          competition. Every subsystem — airframe, avionics, propulsion, and
+          payload — is engineered to work as one integrated system.
+        </p>
+        <div className="drone-model-container" ref={modelContainerRef} aria-label="3D model of Sentinel Autonomous Drone">
+          <Canvas
+            dpr={1}
+            camera={{ fov: 45 }}
+            style={{ width: "100%", height: "100%" }}
+            frameloop={isModelActive ? "always" : "never"}
+          >
+            <Suspense fallback={null}>
+              <PresentationControls
+                speed={1.5}
+                global
+                zoom={0.5}
+                polar={[-0.1, Math.PI / 4]}
+              >
+                <Stage
+                  environment={null}
+                  preset="rembrandt"
+                  intensity={1.2}
+                  shadows={false}
+                >
+                  <Model scale={window.innerWidth < 600 ? 3.8 : 5.0} />
+                </Stage>
+              </PresentationControls>
+            </Suspense>
+          </Canvas>
+          <Loader />
+        </div>
+      </section>
+      <div className="drone-sections-container">
+        {DRONE_SECTIONS.map((section, index) => (
+          <DroneSection
+            key={section.title}
+            image={section.image}
+            images={section.images}
+            texts={section.texts}
+            title={section.title}
+            description={section.description}
+            isOpen={openSections[index]}
+            onToggle={() => toggleSection(index)}
+          />
+        ))}
+      </div>
+      <section className="drone-callout">
+        {" "}
+        <p className="drone-eyebrow">Sentinel</p>{" "}
+        <h2>
+          {" "}
+          Built to <em>Search. Detect. Deliver.</em>{" "}
+        </h2>{" "}
+        <p>
+          {" "}
+          Sentinel brings together autonomous navigation, real-time object
+          detection, obstacle awareness, and precision payload delivery into one
+          integrated aerial platform. Every subsystem is designed to work
+          together toward a single mission: finding, identifying, and responding
+          to targets autonomously.{" "}
+        </p>{" "}
+        <div className="drone-callout__line" aria-hidden="true" />{" "}
+      </section>
+    </div>
+  );
 }
 
 export default Drone;

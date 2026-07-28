@@ -119,45 +119,46 @@ html {scroll-behavior: smooth;}
 }
 
 .sidenav-container {
-    position: sticky;
+  position: sticky;
   top: var(--nav-top);
   width: 100%;
   padding: 18px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
   z-index: 2;
-
   max-height: calc(100vh - var(--nav-top) - 24px);
   overflow-y: auto;
 }
 
 .sidenav-container h2 {
-    font-size: 1.75rem;
-    color: #FFB81C;
-    margin-bottom: 16px;
+  font-size: 1.75rem;
+  color: #ffb81c;
+  margin-bottom: 16px;
 }
 
 .sidenav-container ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sidenav-container ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 600;
-    transition: color 0.2s ease;
+  display: block;
+  padding: 9px 13px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: rgba(246, 241, 232, 0.78);
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
-.sidenav-container ul li a:hover, .sidenav-container ul li a:active {
-  background: linear-gradient(90deg, #005030, #A4D65E);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.sidenav-container ul li a:hover,
+.sidenav-container ul li a:focus {
+  color: #090909;
+  background: #a4d65e;
 }
 
 .team-content {
@@ -167,12 +168,6 @@ html {scroll-behavior: smooth;}
     align-items: center;
     margin: 0 auto;
     text-align: center;
-}
-
-.team-page__header {
-    color: #FFB81C;
-    font-size: 1.5rem;
-    font-weight: 700;
 }
 
 .project-leads-container {
@@ -679,6 +674,64 @@ html {scroll-behavior: smooth;}
   }
 }
 
+.team-callout {
+  position: relative;
+  padding: 74px max(7vw, 24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  background: #005030;
+  color: #f6f1e8;
+}
+
+/* Eyebrow */
+.team-callout__eyebrow {
+  margin: 0 0 15px;
+  color: #ffb81c;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Main heading */
+.team-callout h2 {
+  max-width: 800px;
+  margin: 0;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  font-size: clamp(2.15rem, 4vw, 4rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+  color: #f6f1e8;
+}
+
+/* Description */
+.team-callout__description {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: rgba(246, 241, 232, 0.78);
+  font-family: "Geologica", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Decorative circles */
+.team-callout__line {
+  position: absolute;
+  right: -8vw;
+  bottom: -13vw;
+  width: 58vw;
+  height: 58vw;
+  border: 1px solid rgba(164, 214, 94, 0.6);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 58px rgba(164, 214, 94, 0.09),
+    0 0 0 116px rgba(164, 214, 94, 0.06);
+  pointer-events: none;
+}
+
 @media (max-width: 420px) {
   .team-page--shell {
     padding-inline: 12px;
@@ -700,3 +753,449 @@ html {scroll-behavior: smooth;}
   .flip-card-inner { transition: none; }
 }
 
+/* ==========================================
+   LARGE DESKTOPS (1600px+)
+========================================== */
+
+@media (min-width: 1600px) {
+
+  .team-page__header {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+
+
+  .team-hero__content {
+    max-width: 1500px;
+    gap: 80px;
+  }
+
+
+  .team-hero__image img {
+    border-radius: 24px;
+  }
+
+
+  .flip-card {
+    width: 340px;
+    height: 440px;
+  }
+
+}
+
+
+/* ==========================================
+   LAPTOPS
+========================================== */
+
+@media (max-width: 1200px) {
+
+
+  .team-page__header {
+    padding-top: 150px;
+  }
+
+
+  .team-hero__content {
+    gap: 40px;
+  }
+
+
+  .team-page__header h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+  }
+
+
+  .sidenav-container {
+    top: 120px;
+  }
+
+
+  .flip-card {
+    width: 300px;
+    height: 400px;
+  }
+
+
+  .uavd-about,
+  .payload-about,
+  .gnc-about,
+  .obj-rec-about,
+  .obs-avo-abou,
+  .systems-about {
+    max-width: 700px;
+  }
+
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 1023px) {
+
+
+  /* ===============================
+     PAGE STRUCTURE
+  =============================== */
+
+
+  .team-page--shell {
+    padding: 40px 24px;
+  }
+
+
+  .team-page--grid {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+
+  /* ===============================
+     HERO
+  =============================== */
+
+
+  .team-page__header {
+    min-height: auto;
+    padding: 120px 36px 60px;
+    text-align: center;
+  }
+
+
+  .team-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+
+  .team-eyebrow {
+    text-align: center;
+  }
+
+
+  .team-page__header h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 9vw, 5rem);
+  }
+
+
+  .team-page__header .team-hero__copy {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .team-hero__image {
+    width: min(700px, 100%);
+  }
+
+
+
+  /* ===============================
+     SIDEBAR
+  =============================== */
+
+
+  .sidenav-container {
+    position: fixed;
+    inset: 76px 16px auto;
+    width: auto;
+    max-height: calc(100vh - 100px);
+  }
+
+
+
+  /* ===============================
+     CARDS
+  =============================== */
+
+
+  .project-leads-cards,
+  .UAVD-members,
+  .payload-members,
+  .gnc-members,
+  .obj-rec-members,
+  .obs-avo-members,
+  .systems-members,
+  .mentors {
+    gap: 24px;
+  }
+
+
+  .flip-card,
+  .profile-card {
+    width: 280px;
+    height: 360px;
+  }
+
+
+
+  /* ===============================
+     ABOUT SECTIONS
+  =============================== */
+
+
+  .uavd-about,
+  .payload-about,
+  .gnc-about,
+  .obj-rec-about,
+  .obs-avo-abou,
+  .systems-about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  .uavd-about img,
+  .payload-about img,
+  .gnc-about img,
+  .obj-rec-about img,
+  .obs-avo-abou img,
+  .systems-about img {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+}
+
+
+
+/* ==========================================
+   MOBILE PHONES (600px and below)
+========================================== */
+
+@media (max-width: 600px) {
+
+
+  /* ===============================
+     PAGE
+  =============================== */
+
+
+  .team-page--shell {
+    padding: 28px 16px;
+  }
+
+
+
+  /* ===============================
+     HERO
+  =============================== */
+
+
+  .team-page__header {
+    padding: 100px 24px 45px;
+  }
+
+
+  .team-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+
+  .team-page__header h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+    line-height: .95;
+  }
+
+
+  .team-page__header .team-hero__copy {
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+
+
+  .team-hero__image img {
+    border-radius: 14px;
+  }
+
+
+
+  /* ===============================
+     SIDEBAR BUTTON
+  =============================== */
+
+
+  .side-nav-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+
+
+  .sidenav-container {
+    inset: 70px 12px auto;
+  }
+
+
+  .sidenav-container h2 {
+    font-size: 1.4rem;
+  }
+
+
+
+  /* ===============================
+     TEAM CARDS
+  =============================== */
+
+
+  .project-leads-container,
+  .UAV-Design-container,
+  .payload-container,
+  .GNC-container,
+  .object-recognition-container,
+  .obstacle-avoidance-container,
+  .systems-container,
+  .advisors-container,
+  .sponsors-container {
+    margin: 28px 0;
+  }
+
+
+  .project-leads-container__title,
+  .vis--title,
+  .uav-design--title,
+  .payload--title,
+  .gnc--title,
+  .object-recognition--title,
+  .obstacle-avoidance--title,
+  .systems--title,
+  .advisors--title,
+  .sponsors--title {
+    font-size: 1.3rem;
+  }
+
+
+  .flip-card,
+  .profile-card {
+    width: min(85vw, 320px);
+    height: min(85vw, 320px);
+  }
+
+
+  .flip-card__front-caption {
+    padding: 30px 20px 20px;
+  }
+
+
+  .flip-card__front-caption h3 {
+    font-size: 1rem;
+  }
+
+
+  .flip-card__front-caption p {
+    font-size: .78rem;
+  }
+
+
+  .flip-card__back {
+    padding: 30px;
+  }
+
+
+  .flip-card__back h3 {
+    font-size: 1.15rem;
+  }
+
+
+  .flip-card__text {
+    font-size: .8rem;
+  }
+
+
+
+  /* ===============================
+     ABOUT SECTIONS
+  =============================== */
+
+
+  .uavd-about,
+  .payload-about,
+  .gnc-about,
+  .obj-rec-about,
+  .obs-avo-abou,
+  .systems-about {
+    gap: 16px;
+  }
+
+
+  .team-content img {
+    border-radius: 14px;
+  }
+
+
+
+  /* ===============================
+     CALLOUT
+  =============================== */
+
+
+  .team-callout {
+    padding: 50px 24px;
+  }
+
+
+  .team-callout__eyebrow {
+    font-size: .65rem;
+  }
+
+
+  .team-callout h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+
+  .team-callout__description {
+    font-size: .95rem;
+    line-height: 1.6;
+  }
+
+
+  .team-callout__line {
+    width: 95vw;
+    height: 95vw;
+    right: -50vw;
+    bottom: -25vw;
+
+    box-shadow:
+      0 0 0 35px rgba(164,214,94,.09),
+      0 0 0 70px rgba(164,214,94,.06);
+  }
+
+}
+
+
+/* ==========================================
+   SMALL PHONES (420px and below)
+========================================== */
+
+@media (max-width: 420px) {
+
+
+  .team-page--shell {
+    padding-inline: 12px;
+  }
+
+
+  .flip-card,
+  .profile-card {
+    width: 88vw;
+    height: 88vw;
+  }
+
+
+  .flip-card__back {
+    padding: 24px;
+  }
+
+
+  .flip-card__text {
+    font-size: .75rem;
+  }
+
+}

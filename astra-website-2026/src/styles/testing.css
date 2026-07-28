@@ -111,6 +111,7 @@ body {
   line-height: 0.98;
 
   letter-spacing: -0.055em;
+   animation: tips-rise 0.75s both;
 }
 
 
@@ -134,6 +135,7 @@ body {
   font-size: clamp(1rem, 1.6vw, 1.18rem);
 
   line-height: 1.7;
+   animation: tips-rise 0.75s 0.12s both;
 }
 
 .topbar {
@@ -146,6 +148,7 @@ body {
   padding: 14px 5%;
   background: #0f0f0f;
   border-bottom: 1px solid #2a2a2a;
+  
 }
 
 .brand {
@@ -252,4 +255,445 @@ h1 {
   .search {
     display: none;
   }
+}
+
+.flight-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgb(0 0 0 / 70%);
+}
+
+.flight-modal {
+  position: relative;
+  width: min(600px, 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  background: #fff;
+  color: #111;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  border: 0;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.details-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.testing-callout h2 {
+  margin: 0;
+  font-family: "Zalando Sans SemiExpanded", sans-serif;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.testing-callout h2 {
+  font-size: clamp(2.15rem, 4vw, 4rem);
+}
+
+.testing-callout {
+  position: relative;
+  padding: 74px max(7vw, 24px);
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  overflow: hidden;
+  background: #005030;
+}
+
+.testing-callout h2 {
+  max-width: 800px;
+}
+
+.testing-callout > p:not(.testing-eyebrow) {
+  max-width: 650px;
+  margin: 25px 0 0;
+  color: rgba(246, 241, 232, 0.78);
+  line-height: 1.7;
+}
+
+.testing-callout__line {
+  position: absolute;
+  right: -8vw;
+  bottom: -13vw;
+  width: 58vw;
+  height: 58vw;
+  border: 1px solid rgba(164, 214, 94, 0.6);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 58px rgba(164, 214, 94, 0.09),
+    0 0 0 116px rgba(164, 214, 94, 0.06);
+}
+
+/* ==========================================
+   LARGE DESKTOPS (1600px+)
+========================================== */
+
+@media (min-width: 1600px) {
+
+  .testing-hero {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+
+
+  .content {
+    max-width: 1600px;
+  }
+
+
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+
+
+/* ==========================================
+   LAPTOPS
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .testing-hero {
+    padding-top: 150px;
+  }
+
+
+  .testing-hero h1 {
+    max-width: 650px;
+  }
+
+
+  .content {
+    padding: 32px 4%;
+  }
+
+
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px 16px;
+  }
+
+
+  .topbar {
+    padding: 14px 4%;
+  }
+
+
+  .search {
+    width: min(400px, 100%);
+  }
+
+}
+
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width: 900px) {
+
+
+  /* ===============================
+     HERO
+  =============================== */
+
+
+  .testing-hero {
+    min-height: auto;
+    padding: 120px 36px 60px;
+    text-align: center;
+  }
+
+
+  .testing-eyebrow {
+    text-align: center;
+  }
+
+
+  .testing-hero h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
+
+
+  .testing-hero__copy {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  /* ===============================
+     TOP BAR
+  =============================== */
+
+
+  .topbar {
+    gap: 16px;
+    padding: 14px 24px;
+  }
+
+
+  .brand {
+    font-size: 0.9rem;
+  }
+
+
+  .search {
+    max-width: 280px;
+  }
+
+
+
+  /* ===============================
+     CONTENT
+  =============================== */
+
+
+  .content {
+    padding: 30px 24px;
+  }
+
+
+  .content h1 {
+    font-size: 1.4rem;
+  }
+
+
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 16px;
+  }
+
+
+
+  /* ===============================
+     MODAL
+  =============================== */
+
+
+  .flight-modal {
+    width: min(550px, 90%);
+    padding: 1.5rem;
+  }
+
+
+
+  /* ===============================
+     CALLOUT
+  =============================== */
+
+
+  .testing-callout {
+    padding: 60px 36px;
+  }
+
+
+  .testing-callout h2 {
+    max-width: 100%;
+  }
+
+
+  .testing-callout__line {
+    width: 75vw;
+    height: 75vw;
+    right: -35vw;
+    bottom: -20vw;
+  }
+
+}
+
+
+
+/* ==========================================
+   MOBILE PHONES (600px and below)
+========================================== */
+
+@media (max-width: 600px) {
+
+
+  /* Prevent overflow */
+
+  .test-page {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+
+
+  /* ===============================
+     HERO
+  =============================== */
+
+
+  .testing-hero {
+    padding: 105px 24px 50px;
+    min-height: 650px;
+  }
+
+
+  .testing-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 12px;
+  }
+
+
+  .testing-hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.045em;
+  }
+
+
+  .testing-hero__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 20px;
+  }
+
+
+
+  /* ===============================
+     NAVBAR
+  =============================== */
+
+
+  .topbar {
+    padding: 12px 18px;
+    gap: 10px;
+  }
+
+
+  .brand {
+    font-size: 0.75rem;
+  }
+
+
+  .menu-button {
+    font-size: 1.2rem;
+  }
+
+
+
+  /* ===============================
+     VIDEO GRID
+  =============================== */
+
+
+  .content {
+    padding: 24px 18px;
+  }
+
+
+  .content h1 {
+    font-size: 1.25rem;
+    margin-bottom: 22px;
+  }
+
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  .flight-card {
+    border-radius: 10px;
+  }
+
+
+  .flight-info {
+    padding: 12px 14px 16px;
+  }
+
+
+  .flight-info h2 {
+    font-size: 1rem;
+  }
+
+
+  .flight-date {
+    font-size: 0.8rem;
+  }
+
+
+  .details-link {
+    font-size: 0.9rem;
+  }
+
+
+
+  /* ===============================
+     MODAL
+  =============================== */
+
+
+  .flight-modal-backdrop {
+    padding: 1rem;
+  }
+
+
+  .flight-modal {
+    width: 100%;
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+
+  .modal-close {
+    top: 0.5rem;
+    right: 0.75rem;
+  }
+
+
+
+  /* ===============================
+     CALLOUT
+  =============================== */
+
+
+  .testing-callout {
+    padding: 50px 24px;
+  }
+
+
+  .testing-callout h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 1;
+  }
+
+
+  .testing-callout > p:not(.testing-eyebrow) {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+
+  .testing-callout__line {
+    width: 95vw;
+    height: 95vw;
+    right: -50vw;
+    bottom: -25vw;
+
+    box-shadow:
+      0 0 0 35px rgba(164, 214, 94, 0.09),
+      0 0 0 70px rgba(164, 214, 94, 0.06);
+  }
+
 }

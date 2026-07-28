@@ -1,4 +1,4 @@
-import placeholder from "../assets/picture-placeholder.webp";
+import placeholder from "../assets/picture-placeholder.png";
 
 const astraImages = import.meta.glob("../assets/astra-timeline-img*.png", {
   eager: true,
@@ -27,7 +27,7 @@ let timelineElements = [
   {
     id: 2,
     title: "ASTRA",
-    date: "09/13-10/04/2025",
+    date: "09.13-10.04.2025",
     titleDescription: "Review / Retrospective and Onboarding Workshops",
     img: astra[1],
     alt: "ASTRA Team",
@@ -36,7 +36,7 @@ let timelineElements = [
   {
     id: 3,
     title: "Object Recognition",
-    date: "10/04/2025",
+    date: "10.04.2025",
     titleDescription: "Establish Object Detection Algorithm",
     img: astra[2],
     alt: "Object Recognition Object Detection Algorithm",
@@ -45,7 +45,7 @@ let timelineElements = [
   {
     id: 4,
     title: "ASTRA",
-    date: "10/09/2025",
+    date: "10.09.2025",
     titleDescription: "SUAS 2026 Rules Release",
     img: astra[3],
     alt: "Picture of SUAS rules",
@@ -54,7 +54,7 @@ let timelineElements = [
   {
     id: 5,
     title: "Systems",
-    date: "10/11/2025",
+    date: "10.11.2025",
     titleDescription: "Detailed Requirements Analysis",
     img: astra[4],
     alt: "ASTRA Team",
@@ -64,7 +64,7 @@ let timelineElements = [
   {
     id: 6,
     title: "Obstacle Avoidance",
-    date: "10/11/2025",
+    date: "10.11.2025",
     titleDescription:
       "LiDAR Software Repository and Development Plan Established",
     img: astra[5],
@@ -75,7 +75,7 @@ let timelineElements = [
   {
     id: 7,
     title: "UAV Design",
-    date: "10/16/2025",
+    date: "10.16.2025",
     titleDescription: "Propulsion and Power Systems Research / Analysis Begins",
     img: astra[6],
     alt: "ASTRA Team",
@@ -85,7 +85,7 @@ let timelineElements = [
   {
     id: 8,
     title: "Systems",
-    date: "10/18/2025",
+    date: "10.18.2025",
     titleDescription: "New Website Development",
     img: astra[7],
     alt: "ASTRA Team",
@@ -95,7 +95,7 @@ let timelineElements = [
   {
     id: 9,
     title: "GNC",
-    date: "10/23/2025",
+    date: "10.23.2025",
     titleDescription: "Autopilot Research and GCS Configuration",
     img: astra[8],
     alt: "",
@@ -105,7 +105,7 @@ let timelineElements = [
   {
     id: 10,
     title: "Payload",
-    date: "10/25/2025",
+    date: "10.25.2025",
     titleDescription: "Initial Payload Design",
     img: astra[9],
     alt: "",
@@ -115,7 +115,7 @@ let timelineElements = [
   {
     id: 11,
     title: "Object Recognition",
-    date: "10/25/2025",
+    date: "10.25.2025",
     titleDescription: "Initial Training Dataset Created",
     img: astra[10],
     alt: "",
@@ -125,7 +125,7 @@ let timelineElements = [
   {
     id: 12,
     title: "Obstacle Avoidance",
-    date: "10/25/2025",
+    date: "10.25.2025",
     titleDescription: "Microcontroller Trade Study Complete",
     img: astra[11],
     alt: "",
@@ -135,7 +135,7 @@ let timelineElements = [
   {
     id: 13,
     title: "UAV Design",
-    date: "11/1/2025",
+    date: "11.01.2025",
     titleDescription: "Frame Configuration Options Developed",
     img: astra[12],
     alt: "",
@@ -145,7 +145,7 @@ let timelineElements = [
   {
     id: 14,
     title: "Systems",
-    date: "11/06/2025",
+    date: "11.06.2025",
     titleDescription: "Successful Conceptual Design Review",
     img: astra[13],
     alt: "",
@@ -155,7 +155,7 @@ let timelineElements = [
   {
     id: 15,
     title: "Object Recognition",
-    date: "11/08/2025",
+    date: "11.08.2025",
     titleDescription: "First Object Detection Model Trained",
     img: astra[14],
     alt: "",
@@ -165,7 +165,7 @@ let timelineElements = [
   {
     id: 16,
     title: "UAV Design",
-    date: "11/12/2025",
+    date: "11.12.2025",
     titleDescription: "Static Motor Tests",
     img: astra[15],
     alt: "",
@@ -176,7 +176,7 @@ let timelineElements = [
   {
     id: 17,
     title: "GNC",
-    date: "11/15/2025",
+    date: "11.15.2025",
     titleDescription: "Initial Electrical Design Phase",
     img: astra[16],
     alt: "",
@@ -187,7 +187,7 @@ let timelineElements = [
   {
     id: 18,
     title: "Obstacle Avoidance",
-    date: "11/17/2025",
+    date: "11.17.2025",
     titleDescription: "SITL Setup Success and Documentation",
     img: astra[17],
     alt: "",
@@ -198,7 +198,7 @@ let timelineElements = [
   {
     id: 19,
     title: "GNC",
-    date: "11/17/2025",
+    date: "11.17.2025",
     titleDescription: "Telemetry and R.C. Changes",
     img: astra[18],
     alt: "",
@@ -208,7 +208,7 @@ let timelineElements = [
   {
     id: 20,
     title: "UAV Design",
-    date: "11/20/ 2025",
+    date: "11.20.2025",
     titleDescription: "Detailed Modeling of Final Configuration",
     img: astra[19],
     alt: "",
@@ -219,7 +219,7 @@ let timelineElements = [
   {
     id: 21,
     title: "Payload",
-    date: "11/22/2025",
+    date: "11.22.2025",
     titleDescription: "First Drop Tests",
     img: astra[20],
     alt: "",
@@ -230,7 +230,7 @@ let timelineElements = [
   {
     id: 22,
     title: "Object Recognition",
-    date: "11/22/2025",
+    date: "11.22.2025",
     titleDescription: "Full System Simulation",
     img: astra[21],
     alt: "",
@@ -241,7 +241,7 @@ let timelineElements = [
   {
     id: 23,
     title: "GNC",
-    date: "12/05/2025",
+    date: "12.05.2025",
     titleDescription: "Bus Bar Finalized",
     img: astra[22],
     alt: "",
@@ -252,7 +252,7 @@ let timelineElements = [
   {
     id: 24,
     title: "Obstacle Avoidance",
-    date: "12/13/2025",
+    date: "12.13.2025",
     titleDescription: "LiDAR Interface Hardware Tested",
     img: astra[23],
     alt: "",
@@ -263,7 +263,7 @@ let timelineElements = [
   {
     id: 25,
     title: "UAV Design",
-    date: "12/15/2025",
+    date: "12.15.2025",
     titleDescription: "Selected Final Motors, ESC's, and Propellers",
     img: astra[24],
     alt: "",
@@ -274,7 +274,7 @@ let timelineElements = [
   {
     id: 26,
     title: "Payload",
-    date: "12/19/2025",
+    date: "12.19.2025",
     titleDescription: "Payload Prototyping",
     img: astra[25],
     alt: "",
@@ -285,7 +285,7 @@ let timelineElements = [
   {
     id: 27,
     title: "GNC",
-    date: "01/06/2026",
+    date: "01.06.2026",
     titleDescription: "Main Electrical System Finalized",
     img: astra[26],
     alt: "",
@@ -296,7 +296,7 @@ let timelineElements = [
   {
     id: 28,
     title: "Payload",
-    date: "01/15/2026",
+    date: "01.15.2026",
     titleDescription: "Electonics Integration",
     img: astra[27],
     alt: "",
@@ -307,7 +307,7 @@ let timelineElements = [
   {
     id: 29,
     title: "UAV Design",
-    date: "01/15/2026",
+    date: "01.15.2026",
     titleDescription: "Finalizing Propulsion Layout",
     img: astra[28],
     alt: "",
@@ -318,7 +318,7 @@ let timelineElements = [
   {
     id: 30,
     title: "Object Recognition",
-    date: "01/24/2026",
+    date: "01.24.2026",
     titleDescription: "Detection Model Runs on Onboard Computer",
     img: astra[29],
     alt: "",
@@ -329,7 +329,7 @@ let timelineElements = [
   {
     id: 31,
     title: "Obstacle Avoidance",
-    date: "01/31/2026",
+    date: "01.31.2026",
     titleDescription: "LiDAR Data Displayed in Mission Planner",
     img: astra[30],
     alt: "",
@@ -340,7 +340,7 @@ let timelineElements = [
   {
     id: 32,
     title: "ASTRA",
-    date: "01/31/2026",
+    date: "01.31.2026",
     titleDescription: "Official Registration Submittal",
     img: astra[31],
     alt: "",
@@ -351,7 +351,7 @@ let timelineElements = [
   {
     id: 33,
     title: "UAV Design",
-    date: "02/07/2026",
+    date: "02.07.2026",
     titleDescription: "Integrated Structural and Electrical Wiring Models",
     img: astra[32],
     alt: "",
@@ -361,7 +361,7 @@ let timelineElements = [
   {
     id: 34,
     title: "Payload",
-    date: "02/14/2026",
+    date: "02.14.2026",
     titleDescription: "4 Servo Release Mechanism",
     img: astra[33],
     alt: "",
@@ -372,7 +372,7 @@ let timelineElements = [
   {
     id: 35,
     title: "Object Recognition",
-    date: "02/14/2026",
+    date: "02.14.2026",
     titleDescription: "Camera Pipeline Integrated",
     img: astra[34],
     alt: "",
@@ -382,7 +382,7 @@ let timelineElements = [
   {
     id: 36,
     title: "GNC",
-    date: "02/21/2026",
+    date: "02.21.2026",
     titleDescription: "Custom Battery Making for Sentinel",
     img: astra[36],
     alt: "Custom Sentinel battery packs",
@@ -391,7 +391,7 @@ let timelineElements = [
   {
     id: 37,
     title: "UAV Design",
-    date: "02/24/2026",
+    date: "02.24.2026",
     titleDescription: "Assembly Begins",
     img: astra[37],
     alt: "Sentinel assembly",
@@ -400,7 +400,7 @@ let timelineElements = [
   {
     id: 38,
     title: "Payload",
-    date: "02/28/2026",
+    date: "02.28.2026",
     titleDescription: "Spring Integration",
     img: astra[35],
     alt: "Payload parachute spring integration",
@@ -410,7 +410,7 @@ let timelineElements = [
   {
     id: 39,
     title: "Object Recognition",
-    date: "03/07/2026",
+    date: "03.07.2026",
     titleDescription: "Full System Simulation Through Mission Planner",
     img: astra[38],
     alt: "Object Recognition Mission Planner simulation",
@@ -419,7 +419,7 @@ let timelineElements = [
   {
     id: 40,
     title: "Obstacle Avoidance",
-    date: "03/07/2026",
+    date: "03.07.2026",
     titleDescription: "L2 LiDAR Visualization in RViz",
     img: astra[39],
     alt: "LiDAR data in RViz",
@@ -428,7 +428,7 @@ let timelineElements = [
   {
     id: 41,
     title: "GNC",
-    date: "03/09/2026",
+    date: "03.09.2026",
     titleDescription: "Main DC Wire Soldering Finished",
     img: astra[40],
     alt: "Sentinel DC power wiring",
@@ -437,7 +437,7 @@ let timelineElements = [
   {
     id: 42,
     title: "Payload",
-    date: "03/12/2026",
+    date: "03.12.2026",
     titleDescription: "Release Mechanism Integrated Drop Testing",
     img: astra[41],
     alt: "Payload release mechanism drop test",
@@ -446,7 +446,7 @@ let timelineElements = [
   {
     id: 43,
     title: "Systems",
-    date: "03/12/2026",
+    date: "03.12.2026",
     titleDescription: "Successful Preliminary Design Review",
     img: astra[42],
     alt: "ASTRA Preliminary Design Review",
@@ -455,7 +455,7 @@ let timelineElements = [
   {
     id: 44,
     title: "Payload",
-    date: "03/14/2026",
+    date: "03.14.2026",
     titleDescription: "First Successful Payload Drop Test from 12S",
     img: astra[43],
     alt: "Payload drop test",
@@ -464,7 +464,7 @@ let timelineElements = [
   {
     id: 45,
     title: "GNC",
-    date: "03/19/2026",
+    date: "03.19.2026",
     titleDescription: "Voltage/Current Telemetry Configured",
     img: astra[44],
     alt: "Sentinel voltage and current telemetry",
@@ -473,7 +473,7 @@ let timelineElements = [
   {
     id: 46,
     title: "Object Recognition",
-    date: "03/21/2026",
+    date: "03.21.2026",
     titleDescription: "Successful Flight Test of Object Detection and Flight Control Integration",
     img: astra[45],
     alt: "Object detection and flight control test",
@@ -482,7 +482,7 @@ let timelineElements = [
   {
     id: 47,
     title: "Systems",
-    date: "03/12/2026",
+    date: "03.12.2026",
     titleDescription: "TDR and Detailed Website Work Begins",
     img: astra[46],
     alt: "ASTRA technical design report and website work",
@@ -491,7 +491,7 @@ let timelineElements = [
   {
     id: 48,
     title: "UAV Design",
-    date: "03/26/2026",
+    date: "03.26.2026",
     titleDescription: "Assembly Completed",
     img: astra[47],
     alt: "Completed Sentinel assembly",
@@ -500,7 +500,7 @@ let timelineElements = [
   {
     id: 49,
     title: "ASTRA",
-    date: "03/30/2026",
+    date: "03.30.2026",
     titleDescription: "Sentinel's First Manual Flight",
     img: astra[48],
     alt: "Sentinel first manual flight",
@@ -509,7 +509,7 @@ let timelineElements = [
   {
     id: 50,
     title: "ASTRA",
-    date: "03/31/2026",
+    date: "03.31.2026",
     titleDescription: "Sentinel's First Autonomous Flight",
     img: astra[49],
     alt: "Sentinel first autonomous flight",
@@ -518,7 +518,7 @@ let timelineElements = [
   {
     id: 51,
     title: "Systems",
-    date: "04/05/2026",
+    date: "04.05.2026",
     titleDescription: "Proof of Flight Video Complete",
     img: astra[50],
     alt: "Proof of Flight video",
@@ -526,7 +526,7 @@ let timelineElements = [
   },  {
     id: 52,
     title: "ASTRA",
-    date: "04/07/2026",
+    date: "04.07.2026",
     titleDescription: "Proof of Flight Video Acceptance",
     img: astra[51],
     alt: "Proof of Flight acceptance",
@@ -535,7 +535,7 @@ let timelineElements = [
   {
     id: 53,
     title: "Obstacle Avoidance",
-    date: "04/10/2026",
+    date: "04.10.2026",
     titleDescription: "Static LiDAR Flight Test",
     img: astra[52],
     alt: "Static LiDAR flight test",
@@ -544,7 +544,7 @@ let timelineElements = [
   {
     id: 54,
     title: "Object Recognition",
-    date: "04/25/2026",
+    date: "04.25.2026",
     titleDescription: "Began Competition Configuration Data Collection",
     img: astra[53],
     alt: "Competition-style object recognition data collection",
@@ -553,7 +553,7 @@ let timelineElements = [
   {
     id: 55,
     title: "Payload",
-    date: "05/01/2026",
+    date: "05.01.2026",
     titleDescription: "Beacon Payload Fully Assembled",
     img: astra[54],
     alt: "Beacon payload",
@@ -562,7 +562,7 @@ let timelineElements = [
   {
     id: 56,
     title: "GNC",
-    date: "05/02/2026",
+    date: "05.02.2026",
     titleDescription: "Full-Scale Autonomous Testing",
     img: astra[55],
     alt: "Full-scale autonomous testing",
@@ -571,7 +571,7 @@ let timelineElements = [
   {
     id: 57,
     title: "Payload",
-    date: "05/18/2026",
+    date: "05.18.2026",
     titleDescription: "Barometer Testing",
     img: astra[56],
     alt: "Payload barometer testing",
@@ -580,7 +580,7 @@ let timelineElements = [
   {
     id: 58,
     title: "Payload",
-    date: "05/31/2026",
+    date: "05.31.2026",
     titleDescription: "Accelerometer Testing",
     img: astra[57],
     alt: "Payload accelerometer testing",
@@ -589,7 +589,7 @@ let timelineElements = [
   {
     id: 59,
     title: "GNC",
-    date: "06/06/2026",
+    date: "06.06.2026",
     titleDescription: "Autonomous Speed Limit Testing",
     img: astra[58],
     alt: "Autonomous speed limit testing",
@@ -598,7 +598,7 @@ let timelineElements = [
   {
     id: 60,
     title: "Obstacle Avoidance",
-    date: "06/06/2026",
+    date: "06.06.2026",
     titleDescription: "Obstacle Avoidance Functionality Confirmed",
     img: astra[59],
     alt: "Obstacle avoidance flight test",
@@ -607,7 +607,7 @@ let timelineElements = [
   {
     id: 61,
     title: "Payload",
-    date: "06/13/2026",
+    date: "06.13.2026",
     titleDescription: "First Fully Integrated Object Recognition and Payload Test",
     img: astra[60],
     alt: "Integrated object recognition and payload test",
@@ -617,7 +617,7 @@ let timelineElements = [
   {
     id: 62,
     title: "Object Recognition",
-    date:"6/13/2026",
+    date: "06.13.2026",
     titleDescription: "First Fully Integrated Object Recognition and Payload Test",
     img: astra[60],
     alt: "Integrated object recognition and payload test",

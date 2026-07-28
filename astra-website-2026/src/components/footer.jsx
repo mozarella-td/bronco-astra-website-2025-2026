@@ -1,9 +1,9 @@
-import sponsor from '../assets/lockheed-martin-logo.webp';
+import sponsor from '../assets/lockheed-martin-logo.png';
 
 function Footer () {
     return (
         <>
-            <div className="footer-container">
+            <div className="footer-container" id="footer">
                 <div className="sponsor-section">
                     <h1>
                         Proudly Sponsored by:
@@ -14,9 +14,9 @@ function Footer () {
                     <div className="contact">
                         <h1>Contact the Project Leads:</h1>
                         <h2 id="lead-role">Electrical & Software Lead </h2>
-                        <h3>Ashton Vogel: akvogel@cpp.edu</h3>
+                        <h3>Ashton Vogel: Ashtonkvogel@outlook.com</h3>
                         <h2 id="lead-role">Structural & Systems Lead</h2>
-                        <h3>Danielle King: dnking@cpp.edu</h3>
+                        <h3>Danielle King: dnkingcpp@gmail.com</h3>
                     </div>
                     <div className="location">
                         <h1>Location:</h1>
