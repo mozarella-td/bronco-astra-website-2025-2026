@@ -118,6 +118,10 @@ html {scroll-behavior: smooth;}
   box-shadow: 0 25px 70px rgba(0,0,0,0.45);
 }
 
+.side-nav-toggle {
+  display: none;
+}
+
 .sidenav-container {
   position: sticky;
   top: var(--nav-top);

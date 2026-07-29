@@ -178,6 +178,8 @@ function MemberCard({ image, name, role }) {
 }
 
 function Team() {
+  const [sideNavOpen, setSideNavOpen] = useState(false);
+
   return (
     <>
       <div className="team-page--shell">
@@ -203,9 +205,22 @@ function Team() {
           </div>
         </section>
         <div className="team-page--grid">
-          <aside className="sidenav-container" aria-label="On This Page">
+          <button
+            type="button"
+            className="side-nav-toggle"
+            aria-expanded={sideNavOpen}
+            aria-controls="team-sidenav"
+            onClick={() => setSideNavOpen((v) => !v)}
+          >
+            {sideNavOpen ? "Hide Page Navigation" : "On This Page"}
+          </button>
+          <aside
+            id="team-sidenav"
+            className={`sidenav-container ${sideNavOpen ? "is-open" : ""}`}
+            aria-label="On This Page"
+          >
             <h2>On This Page</h2>
-            <ul>
+            <ul onClick={() => setSideNavOpen(false)}>
               <li>
                 <a href="#leads">Project Leads</a>
               </li>

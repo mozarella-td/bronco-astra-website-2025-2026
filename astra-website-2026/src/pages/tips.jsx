@@ -29,7 +29,7 @@ const resources = [
     author: "Areg Hovumyan",
     description:
       "A ROS2 and MAVROS test that validates ground-initiated companion-computer shutdown during simulation.",
-    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FSoftware%2FObject%20Recognition%2FDocumentation%2FSimulations%2F12%2D9%2D25%20Shutting%20Jetson%20through%20MissionPlanner%20simulation%2FRecording%202025%2D12%2D09%20104557%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133198176&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2Ea6ae3ce3%2D66df%2D416a%2Daac7%2Dad5d5d8e3557",
+    link: "https://livecsupomona-my.sharepoint.com/:v:/g/personal/akvogel_cpp_edu/IQB85b8rmX6mTZbQXglHSo_qAQM4IXRfmQeQfUtj2LoOSlQ?e=s1SW1S&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
     tags: ["Jetson", "MAVROS", "ROS2"],
   },
   {
@@ -89,7 +89,7 @@ const resources = [
     author: "Aiden Sanchez",
     description:
       "A 2026 payload-parachute selection study covering descent rate, deployment height, wind drift, landing accuracy, and folding references.",
-    link: "https://livecsupomona-my.sharepoint.com/shared?listurl=https%3A%2F%2Flivecsupomona%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments&id=%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments%2FSUAS%202026%2FStructural%20%26%20Systems%2FVIS%2FPayload%2FDocumentation%2FParachute%20Reports%2FProject%20Astra%20%2D%20Hemispherical%2060%5F%20Main%20Parachute%20Evaluation%28updated%20calcs%29%20%282%29%2Epdf&parent=%2Fpersonal%2Fdnking%5Fcpp%5Fedu%2FDocuments%2FSUAS%202026%2FStructural%20%26%20Systems%2FVIS%2FPayload%2FDocumentation%2FParachute%20Reports&ct=1785133612714&or=WORD%2DWEB%2EBODY%2ENT&shareLink=1&ga=1",
+    link: "https://livecsupomona-my.sharepoint.com/:b:/g/personal/dnking_cpp_edu/IQDPH9snMPYZTZToq-Qzjtw7Acf-k21RbYuugxaT4DvxZp8?e=gn0HnN",
     tags: ["Payload", "Parachute", "Calculations"],
   },
   {
@@ -109,7 +109,7 @@ const resources = [
     author: "Waamiq Sharrar",
     description:
       "Battery, energy, current, wire-gauge, connector, and power-distribution tradeoffs for a safe electrical architecture.",
-    link: "https://livecsupomona-my.sharepoint.com/shared?listurl=https%3A%2F%2Flivecsupomona%2Dmy%2Esharepoint%2Ecom%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments&id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FSentinel%2F6S9P%20Concetualizing%2Epdf&parent=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FSentinel&ct=1785133706170&or=WORD%2DWEB%2EBODY%2ENT&shareLink=1&ga=1",
+    link: "https://livecsupomona-my.sharepoint.com/:b:/g/personal/akvogel_cpp_edu/IQAmGOkD3hUoQbJmltKVA888ATLspaVgBe3_6iDrhXRwKSM?e=euWEv8",
     tags: ["Power", "Battery", "PDB"],
   },
   {

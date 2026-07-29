@@ -532,6 +532,12 @@ nav a:hover, nav a:active {
   margin-top: 40px;
 }
 
+.contact-and-location .contact,
+.contact-and-location .location {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
 #lead-role {
   color: #FFB81C;
   font-weight: 700;
@@ -625,6 +631,8 @@ nav a:hover, nav a:active {
 
   width:100%;
 
+  transform:none;
+
   display:none;
 
   flex-direction:column;
@@ -708,6 +716,56 @@ nav a:hover, nav a:active {
   }
 
 
+  /* Homepage sections should stack instead of forcing a wide two-column layout */
+
+  .home-page--interview-container {
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    padding: 56px 24px;
+
+    text-align: center;
+
+  }
+
+  .interview-video {
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+  }
+
+  .interview-description-message h2 {
+
+    max-width: 100%;
+
+  }
+
+
+  /* Footer contact info should stack instead of overflowing the viewport */
+
+  .contact-and-location {
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 24px;
+
+  }
+
+  .footer-container {
+
+    height: auto;
+
+    padding: 32px 16px;
+
+  }
 
 }
 
@@ -759,6 +817,33 @@ nav a:hover, nav a:active {
   .nav-search__input {
 
     height:45px;
+
+  }
+
+
+  /* Hero content should fit within the viewport and stack its buttons */
+
+  .hero-content {
+
+    left: 24px;
+
+    right: 24px;
+
+    max-width: none;
+
+  }
+
+  .hero-actions {
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+  }
+
+  .hero-actions a {
+
+    text-align: center;
 
   }
 
