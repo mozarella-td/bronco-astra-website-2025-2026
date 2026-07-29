@@ -207,18 +207,26 @@ function Team() {
         <div className="team-page--grid">
           <button
             type="button"
-            className="side-nav-toggle"
+            className={`side-nav-toggle ${sideNavOpen ? "is-hidden" : ""}`}
             aria-expanded={sideNavOpen}
             aria-controls="team-sidenav"
             onClick={() => setSideNavOpen((v) => !v)}
           >
-            {sideNavOpen ? "Hide Page Navigation" : "On This Page"}
+            On This Page
           </button>
           <aside
             id="team-sidenav"
             className={`sidenav-container ${sideNavOpen ? "is-open" : ""}`}
             aria-label="On This Page"
           >
+            <button
+              type="button"
+              className="sidenav-close"
+              aria-label="Close navigation"
+              onClick={() => setSideNavOpen(false)}
+            >
+              ×
+            </button>
             <h2>On This Page</h2>
             <ul onClick={() => setSideNavOpen(false)}>
               <li>
