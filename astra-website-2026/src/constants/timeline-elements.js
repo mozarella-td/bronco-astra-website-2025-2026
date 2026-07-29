@@ -1,12 +1,12 @@
 import placeholder from "../assets/picture-placeholder.webp";
 
-const astraImages = import.meta.glob("../assets/astra-timeline-img*.png", {
+const astraImages = import.meta.glob("../assets/astra-timeline-img*.webp", {
   eager: true,
   import: "default",
 });
 
 const astra = Object.entries(
-  import.meta.glob("../assets/astra-timeline-img*.png", {
+  import.meta.glob("../assets/astra-timeline-img*.webp", {
     eager: true,
     import: "default",
   }),
