@@ -346,6 +346,16 @@
   margin: 0;
 }
 
+/* The fixed-width image squeezes this text into a narrow column on phones,
+   so cap its height and let it scroll instead of ballooning the row. */
+@media (max-width: 600px) {
+  .drone-section__description {
+    max-height: 4.5em;
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+}
+
 .drone-section__chevron {
   flex: 0 0 auto;
   color: #FFB81C;
