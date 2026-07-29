@@ -39,7 +39,7 @@ const resources = [
     author: "Ryan Tran",
     description:
       "A virtual mission used to monitor aircraft path, waypoint progress, heading, and image-capture messages before applying the workflow to real flight testing.",
-    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FSoftware%2FObject%20Recognition%2FDocumentation%2FSimulations%2F2%2D26%2D26%20Dynamic%20Flight%20Test%2Fflight%5Fsim%5F02%2D26%2D26%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133279105&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E6b89fc5b%2Da93b%2D4e94%2D9200%2D8acd48bb640d",
+    link: "https://livecsupomona-my.sharepoint.com/:v:/g/personal/akvogel_cpp_edu/IQDbsL-IownbTo3c_PJuTmj4AZbo2ocSdWW4m3_-Qa_vVZk?e=cdnEce&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
     tags: ["Simulation", "Waypoints", "Mission"],
   },
   {
@@ -49,7 +49,7 @@ const resources = [
     author: "Waamiq Sharrar",
     description:
       "An RFD900 radio-health evaluation comparing RSSI and noise levels to find telemetry issues before flight testing.",
-    link: "https://livecsupomona-my.sharepoint.com/personal/akvogel_cpp_edu/_layouts/15/stream.aspx?id=%2Fpersonal%2Fakvogel%5Fcpp%5Fedu%2FDocuments%2FElectrical%20%26%20Software%2FGNC%2FGCS%2FRFD900x%20Noise%20Simulation%2F2%2D25%2D26%2F2026%2D02%2D25%2019%2D01%2D51%2Emp4&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ct=1785133316564&or=WORD%2DWEB%2EBODY%2ENT&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E0f3ae7f9%2D57df%2D406c%2Da91e%2D0fb9bf200ed3",
+    link: "https://livecsupomona-my.sharepoint.com/:v:/g/personal/akvogel_cpp_edu/IQAoYBqYfipDR4r3SQCXBB-BAYZW32lDxoKITigB16xPmZU?e=WdigK3&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D",
     tags: ["RFD900", "Telemetry", "RSSI"],
   },
   {
