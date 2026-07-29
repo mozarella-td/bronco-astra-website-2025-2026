@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/index.css";
 import heroVideo from "../assets/astra-broll-footage.mp4";
 
@@ -28,8 +29,8 @@ function Home() {
             </p>
 
             <div className="hero-actions">
-              <a href="/drone">EXPLORE OUR WORK</a>
-              <a href="/team">MEET THE TEAM</a>
+              <Link to="/drone">EXPLORE OUR WORK</Link>
+              <Link to="/team">MEET THE TEAM</Link>
             </div>
           </div>
 
