@@ -619,7 +619,7 @@ let timelineElements = [
   {
     id: 63,
     title: "ASTRA",
-    date: "Unknown",
+    date: "07.28.2026",
     titleDescription: "Final Registration Information Submitted",
     img: astra[61],
     alt: "Final competition registration",
@@ -628,7 +628,7 @@ let timelineElements = [
   {
     id: 64,
     title: "ASTRA",
-    date: "Unknown",
+    date: "07.28.2026",
     titleDescription: "Began Full Mission Testing",
     img: astra[62],
     alt: "Full mission testing",
