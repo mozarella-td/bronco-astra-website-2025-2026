@@ -605,15 +605,6 @@ let timelineElements = [
     alt: "Obstacle avoidance flight test",
     description: "Obstacle Avoidance confirmed the system was working as expected during in-flight testing on a test drone. With the avoidance behavior validated in flight, the subsystem moved out of troubleshooting and became ready for integration onto Sentinel once the team approved installation on the competition aircraft.",
   },
-  {
-    id: 61,
-    title: "Payload",
-    date: "06.13.2026",
-    titleDescription: "First Fully Integrated Object Recognition and Payload Test",
-    img: astra[60],
-    alt: "Integrated object recognition and payload test",
-    description: "Payload completed the first fully integrated test between object recognition and the payload release system. This test connected target detection with the delivery workflow, showing that the team was moving beyond individual subsystem testing and toward a mission-like payload drop sequence.",
-  },
 
   {
     id: 62,
