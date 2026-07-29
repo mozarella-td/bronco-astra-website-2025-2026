@@ -355,7 +355,8 @@ let timelineElements = [
     titleDescription: "Integrated Structural and Electrical Wiring Models",
     img: astra[32],
     alt: "",
-    description: "",
+    description:
+      "UAV Design developed integrated structural and electrical wiring models to plan how Sentinel’s major components would fit within the aircraft frame. These models helped the team visualize component placement, wire routing, battery locations, propulsion connections, and subsystem spacing before final assembly. This work was important because it allowed structural and electrical decisions to be checked together, reducing the risk of interference, inaccessible wiring, or layout changes later in the build process.",
   },
 
   {
