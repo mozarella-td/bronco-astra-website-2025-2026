@@ -51,14 +51,6 @@
     text-align: center;
   }
 
-  .drone-page__title-hero > .drone-model-container {
-    position: relative;
-    width: 100%;
-    height: 420px;
-    top: auto;
-    margin-top: 40px;
-  }
-
 }
 
 /* ==========================================
@@ -168,6 +160,21 @@
   width: min(58vw, 820px);
   height: auto;
   pointer-events: auto;
+}
+
+/* Below the tablet/phone breakpoint the model drops out of the absolute
+   right-hand column and centers itself in normal flow under the hero text. */
+@media (max-width: 900px) {
+  .drone-page__title-hero > .drone-model-container {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 420px;
+    margin-top: 40px;
+  }
 }
 
 .drone-loader {
@@ -497,11 +504,7 @@
     max-width: 100%;
   }
 
-  .drone-model-container {
-    top: auto;
-    right: 0;
-    bottom: -30px;
-    width: 100%;
+  .drone-page__title-hero > .drone-model-container {
     height: 390px;
   }
 }
