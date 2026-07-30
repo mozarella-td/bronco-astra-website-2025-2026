@@ -11,7 +11,7 @@ import "../styles/index.css";
 import "../styles/drone.css";
 
 // Vite will process imported assets, so use a relative import from the src/pages folder.
-import modelPath from "../assets/UAVD_3D_Model_2026_Simplified.glb";
+import modelPath from "../assets/Sentinel_3D_Model_2026_Simplified.glb";
 
 import payloadImage1 from "../assets/Drone/Payload_1.jpg";
 import payloadImage2 from "../assets/Drone/Payload_2.jpg";
